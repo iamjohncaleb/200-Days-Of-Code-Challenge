@@ -22,8 +22,8 @@ For **Day 1** of my **200 Days of Code Challenge**, I built a simple **Calculato
  Simple interactions allow calling functions with input values.
 
 ## 🔗 Next Steps
-🔹 Extend functionality with additional operations.  
-🔹 Optimize gas efficiency.  
-🔹 Integrate with a frontend using **Web3.js** or **ethers.js**.  
+🔹 I will Extend functionality with additional operations.  
+🔹 I will Optimize gas efficiency.  
+🔹 I will Integrate with a frontend using **Web3.js** or **ethers.js**.  
 
 #200DaysOfCode #Web3 #Solidity #SmartContracts #Ethereum #Blockchain #RemixIDE
