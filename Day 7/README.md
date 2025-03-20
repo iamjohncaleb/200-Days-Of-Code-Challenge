@@ -1,4 +1,4 @@
-📅 **Day 41: Counter Smart Contract**  
+📅 **Day 7: Counter Smart Contract**  
 
 🔍 **Overview**  
 Today, I built a **Counter smart contract** that allows users to increment, decrement, and reset a counter with enhanced functionality. It includes **access control** so only the owner can reset the counter.  
