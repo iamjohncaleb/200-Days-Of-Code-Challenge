@@ -1,25 +1,25 @@
-## 📅 **Day 20: Multi-Signature Wallet Smart Contract**  
+## **Day 20: War Fund Crowdfunding Smart Contract**  
 
 ### 🔍 **Overview**  
-A **multi-signature wallet** enhances security by requiring multiple approvals before executing transactions. This contract is useful for **DAOs, joint accounts, and treasury management**, ensuring no single entity has unilateral control.  
+This **War Fund Crowdfunding contract** allows users to **donate ETH** towards a cause with a **funding goal** and **deadline**. If the goal is met, the owner withdraws the funds; otherwise, contributors can request refunds.  
 
 ### 📜 **Key Features**  
-✅ **Multiple Owners** – Only predefined addresses can approve transactions  
-✅ **Transaction Proposals** – Transactions must be proposed before execution  
-✅ **Approval Mechanism** – Requires a set number of confirmations to proceed  
-✅ **Funds Security** – No unauthorized withdrawals possible  
-✅ **Event Logging** – Transparent on-chain transaction tracking  
+✅ **ETH Donations** – Users can contribute to the war fund  
+✅ **Funding Goal & Deadline** – Ensures structured fundraising  
+✅ **Secure Withdrawals** – Only the owner can withdraw funds when the goal is reached  
+✅ **Refund Mechanism** – Contributors can reclaim their ETH if the goal isn’t met  
+✅ **Transparency** – Tracks all donors and contributions  
 
 ### 🛠️ **How It Works**  
-1️⃣ The **contract deployer** adds multiple owners  
-2️⃣ Any **owner can propose a transaction** specifying recipient and amount  
-3️⃣ **Other owners approve** the transaction until the required threshold is met  
-4️⃣ Once approved, **the transaction is executed** and funds are sent  
+1️⃣ The **contract owner** sets the **funding goal** and **deadline** during deployment  
+2️⃣ **Users donate ETH**, and their contributions are recorded  
+3️⃣ If the **goal is met by the deadline**, the owner **withdraws the funds**  
+4️⃣ If the **goal isn’t met**, contributors can **request refunds**  
 
 ### 🔗 **Next Steps**  
-- Implement **time-based expiration** for transaction proposals  
-- Add **role-based permissions** (e.g., proposal vs. approval roles)  
-- Optimize gas usage for batch approvals  
-- Introduce **on-chain governance** to modify approval thresholds dynamically  
+- Implement **tiered rewards** for donors based on contribution amounts  
+- Introduce **partial withdrawals** if milestones are reached before the deadline  
+- Add **multi-signature approval** for fund withdrawals  
+- Enable **off-chain data tracking** for transparency and audits  
 
-#Day20 #200DaysOfCode #Solidity #Ethereum #SmartContracts #CryptoSecurity 🚀
+#Day20 #200DaysOfCode #Solidity #Blockchain #Crypto #Crowdfunding 🚀
