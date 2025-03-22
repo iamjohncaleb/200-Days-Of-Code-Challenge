@@ -3,10 +3,10 @@ pragma solidity ^0.8.0;
 
 contract WeatherChecker {
     address public owner;
-    address public oracle; // Oracle address that updates weather data
+    address public oracle; // Your Oracle address that updates weather data goes here.....
 
     struct WeatherData {
-        int256 temperature; // In Celsius
+        int256 temperature; // Should be in Celsius
         string condition; // e.g., "Sunny", "Rainy"
         uint256 timestamp;
     }
