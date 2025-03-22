@@ -12,8 +12,9 @@ contract SimpleNFT is ERC721URIStorage, Ownable {
     function mintNFT(address recipient, string memory tokenURI) public onlyOwner returns (uint256) {
         _tokenIds++;
         uint256 newItemId = _tokenIds;
-        _mint(recipient, newItemId);
-        _setTokenURI(newItemId, tokenURI);
+        _safeMint(recipient, newItemId);
+        _setTokenURI(newItemId, tokenURI); // Ensure your OpenZeppelin version supports this
+
         return newItemId;
     }
 }
