@@ -1,0 +1,40 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "D:\\1 MARCH\\March End\\200 Days of Code\\Code Snippets\\Day 10\\contracts\\contract.sol": {
+      "lastModificationDate": 1742684687136,
+      "contentHash": "ff2f1d0586c42f8a0cfd3e7c17933342",
+      "sourceName": "contracts/contract.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "SimpleAuction"
+      ]
+    }
+  }
+}

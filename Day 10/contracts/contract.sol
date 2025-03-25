@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
+
 contract SimpleAuction {
     address public highestBidder;
     uint256 public highestBid;
