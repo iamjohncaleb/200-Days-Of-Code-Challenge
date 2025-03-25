@@ -4,17 +4,17 @@ async function main() {
     const [deployer] = await hre.ethers.getSigners();
     console.log(`Deploying contracts with the account: ${deployer.address}`);
 
-    // Deploy a mock ERC20 token for testing (optional)
+    // Deploy ERC20Mock token
     const Token = await hre.ethers.getContractFactory("ERC20Mock");
-    const token = await Token.deploy("TestToken", "TTK", 18, hre.ethers.utils.parseEther("1000000"));
-    await token.deployed();
-    console.log(`Mock ERC20 deployed at: ${token.address}`);
+    const token = await Token.deploy("TestToken", "TTK", 18, hre.ethers.parseEther("1000000"));
+    await token.waitForDeployment();
+    console.log(`Mock ERC20 deployed at: ${await token.getAddress()}`);
 
-    // Deploy the Airdrop contract
+    // Deploy Airdrop contract
     const Airdrop = await hre.ethers.getContractFactory("Airdrop");
-    const airdrop = await Airdrop.deploy(token.address);
-    await airdrop.deployed();
-    console.log(`Airdrop deployed at: ${airdrop.address}`);
+    const airdrop = await Airdrop.deploy(await token.getAddress());
+    await airdrop.waitForDeployment();
+    console.log(`Airdrop deployed at: ${await airdrop.getAddress()}`);
 }
 
 main().catch((error) => {
