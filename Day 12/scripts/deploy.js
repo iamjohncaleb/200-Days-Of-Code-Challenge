@@ -1,19 +1,22 @@
 const hre = require("hardhat");
 
 async function main() {
-    const [deployer] = await hre.ethers.getSigners();
+    const [deployer, owner2, owner3] = await hre.ethers.getSigners();
     console.log(`Deploying contracts with the account: ${deployer.address}`);
+
+    // Define owners (ensure at least 2 for real multisig usage)
+    const owners = [deployer.address, owner2.address, owner3.address];
+    const requiredApprovals = 2;
 
     // Deploy the MultiSigWallet contract
     const MultiSigWallet = await hre.ethers.getContractFactory("MultiSigWallet");
-    const owners = [deployer.address]; // Add more addresses as needed
-    const requiredApprovals = 1;
     const wallet = await MultiSigWallet.deploy(owners, requiredApprovals);
-    await wallet.deployed();
-    console.log(`MultiSigWallet deployed at: ${wallet.address}`);
+    await wallet.waitForDeployment();
+
+    console.log(`MultiSigWallet deployed at: ${wallet.target}`);
 }
 
 main().catch((error) => {
-    console.error(error);
+    console.error("Deployment failed:", error);
     process.exitCode = 1;
 });
