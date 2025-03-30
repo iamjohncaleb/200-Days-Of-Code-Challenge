@@ -2,7 +2,7 @@
 ![Hardhat](https://img.shields.io/badge/Hardhat-%E2%9C%94-yellow)  
 ![Ethereum](https://img.shields.io/badge/Ethereum-Smart%20Contracts-green)  
 
-## 📅 **Day XX: Token Vesting Smart Contract**  
+## 📅 **Day 19: Token Vesting Smart Contract**  
 
 ### 🔍 **Overview**  
 Today, I built a **Token Vesting Smart Contract** that ensures a beneficiary gradually receives tokens over a set duration. This prevents early dumping and supports fair token distribution.  
