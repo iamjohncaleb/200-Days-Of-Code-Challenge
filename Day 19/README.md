@@ -1,24 +1,59 @@
-📅 **Day 19: Enhanced NFT with Minter Approvals**  
+![Solidity](https://img.shields.io/badge/Solidity-^0.8.20-blue)  
+![Hardhat](https://img.shields.io/badge/Hardhat-%E2%9C%94-yellow)  
+![Ethereum](https://img.shields.io/badge/Ethereum-Smart%20Contracts-green)  
 
-🔍 **Overview**  
-Today's contract builds upon the previous **Enhanced NFT contract**, adding **approved minters** instead of a public whitelist. This makes it ideal for **controlled NFT distributions**, where only **trusted addresses** can mint.  
+## 📅 **Day XX: Token Vesting Smart Contract**  
 
-📜 **Key Features**  
-✅ **Owner & Approved Minters** – Only specific addresses can mint  
-✅ **Mint Price Enforcement** – Ensures correct ETH is sent  
-✅ **Max Supply Limit** – Prevents minting beyond a set cap  
-✅ **Pause & Unpause Minting** – Owner can halt minting if needed  
-✅ **Secure Fund Withdrawal** – Owner can collect funds from mint sales  
+### 🔍 **Overview**  
+Today, I built a **Token Vesting Smart Contract** that ensures a beneficiary gradually receives tokens over a set duration. This prevents early dumping and supports fair token distribution.  
 
-🛠️ **How It Works**  
-1️⃣ The **owner sets max supply and mint price** during deployment  
-2️⃣ Only **approved minters or the owner** can mint NFTs  
-3️⃣ Minting can be **paused/unpaused** for security and control  
-4️⃣ The contract **receives ETH** and allows the owner to withdraw funds  
+### 📜 **Key Features**  
+✅ **Supports ERC-20 Tokens** – Any ERC-20 token can be used for vesting  
+✅ **Gradual Token Release** – Tokens are unlocked over a set period  
+✅ **Secure Withdrawals** – Beneficiary can claim vested tokens incrementally  
 
-🔗 **Next Steps**  
-- Implement **minting limits per minter** to prevent abuse  
-- Add **royalties for secondary sales** using ERC-2981  
-- Integrate **on-chain metadata generation** for dynamic NFTs  
+### 🛠️ **How It Works**  
+1️⃣ The contract **locks tokens** for a specified duration  
+2️⃣ The beneficiary **calls release()** to withdraw vested tokens  
+3️⃣ The contract **automatically calculates** the amount available for withdrawal  
 
-#Day19 #200DaysOfCode #Solidity #NFTs #Blockchain #Crypto 🚀
+### 🚀 **Setup and Running the Project**  
+#### **1️⃣ Install Dependencies**  
+Ensure you have **Node.js** and **npm** installed. Then, run:  
+```sh  
+npm install  
+```
+
+#### **2️⃣ Compile the Smart Contract**  
+```sh  
+npx hardhat compile  
+```
+
+#### **3️⃣ Deploy the Contract**  
+To deploy on a local Hardhat network:
+```sh
+npx hardhat node  
+npx hardhat run scripts/deploy_token_vesting.js --network localhost  
+```
+To deploy on Goerli or another testnet, add the network configuration in **hardhat.config.js** and use:  
+```sh
+npx hardhat run scripts/deploy_token_vesting.js --network goerli  
+```
+
+#### **4️⃣ Run Tests**  
+```sh  
+npx hardhat test  
+```
+This will simulate vesting scenarios and validate correct behavior.  
+
+### 🔗 **Next Steps**  
+- Implement **cliff vesting** for time-based release schedules  
+- Add **multiple beneficiary support**  
+- Enable **vesting schedule updates** if needed  
+
+### 🌐 **GitHub Repository**  
+[🔗 Token Vesting Source Code](https://github.com/iamjohncaleb/200-Days-Of-Code-Challenge/tree/main/Day%2019)  
+
+---  
+#SmartContracts #Solidity #Ethereum #Blockchain #TokenVesting #Web3 🚀
+

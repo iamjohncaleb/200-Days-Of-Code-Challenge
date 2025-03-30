@@ -1,39 +1,44 @@
-// test.js
 const { expect } = require("chai");
 const { ethers } = require("hardhat");
 
-describe("EnhancedNFT", function () {
-    let nftContract, owner, user;
-    const maxSupply = 10000;
-    const mintPrice = ethers.utils.parseEther("0.05");
-    
+describe("TokenVesting", function () {
+    let Token, Vesting, token, vesting, owner, beneficiary;
+    const totalSupply = ethers.utils.parseEther("1000");
+    const duration = 365 * 24 * 60 * 60; // 1 year in seconds
+
     beforeEach(async function () {
-        [owner, user] = await ethers.getSigners();
-        const EnhancedNFT = await ethers.getContractFactory("EnhancedNFT");
-        nftContract = await EnhancedNFT.deploy(maxSupply, mintPrice);
-        await nftContract.deployed();
+        [owner, beneficiary] = await ethers.getSigners();
+        Token = await ethers.getContractFactory("MockERC20");
+        token = await Token.deploy("TestToken", "TTK", totalSupply);
+        await token.deployed();
+
+        Vesting = await ethers.getContractFactory("TokenVesting");
+        vesting = await Vesting.deploy(token.address, beneficiary.address, duration);
+        await vesting.deployed();
+
+        await token.transfer(vesting.address, totalSupply);
     });
 
-    it("Should deploy with correct parameters", async function () {
-        expect(await nftContract.maxSupply()).to.equal(maxSupply);
-        expect(await nftContract.mintPrice()).to.equal(mintPrice);
+    it("Should set correct vesting parameters", async function () {
+        expect(await vesting.token()).to.equal(token.address);
+        expect(await vesting.beneficiary()).to.equal(beneficiary.address);
     });
 
-    it("Should allow approved minters to mint when not paused", async function () {
-        await nftContract.connect(owner).approveMinter(user.address);
-        await expect(nftContract.connect(user).mintNFT(user.address, "ipfs://example-metadata", { value: mintPrice }))
-            .to.emit(nftContract, "NFTMinted");
+    it("Should release tokens correctly over time", async function () {
+        await ethers.provider.send("evm_increaseTime", [duration / 2]); // Advance time by half the duration
+        await ethers.provider.send("evm_mine");
+
+        await vesting.connect(beneficiary).release();
+        const balance = await token.balanceOf(beneficiary.address);
+        expect(balance).to.be.closeTo(totalSupply.div(2), ethers.utils.parseEther("1"));
     });
 
-    it("Should not allow minting if paused", async function () {
-        await nftContract.connect(owner).pauseMinting();
-        await expect(nftContract.connect(user).mintNFT(user.address, "ipfs://example-metadata", { value: mintPrice }))
-            .to.be.revertedWith("Pausable: paused");
-    });
+    it("Should release all tokens after full duration", async function () {
+        await ethers.provider.send("evm_increaseTime", [duration]); // Advance time to full vesting period
+        await ethers.provider.send("evm_mine");
 
-    it("Should allow the owner to withdraw funds", async function () {
-        await nftContract.connect(owner).approveMinter(user.address);
-        await nftContract.connect(user).mintNFT(user.address, "ipfs://example-metadata", { value: mintPrice });
-        await expect(nftContract.connect(owner).withdrawFunds()).to.changeEtherBalance(owner, mintPrice);
+        await vesting.connect(beneficiary).release();
+        const balance = await token.balanceOf(beneficiary.address);
+        expect(balance).to.equal(totalSupply);
     });
 });
