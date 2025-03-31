@@ -1,35 +1,38 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.20;
 
-interface IERC20 {
-    function transfer(address recipient, uint256 amount) external returns (bool);
-    function transferFrom(address sender, address recipient, uint256 amount) external returns (bool);
-    function balanceOf(address account) external view returns (uint256);
-}
+import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
 contract FlashLoan {
+    address public liquidityProvider;
     IERC20 public token;
-    uint256 public poolBalance;
 
     event LoanExecuted(address borrower, uint256 amount);
 
     constructor(address _token) {
+        liquidityProvider = msg.sender;
         token = IERC20(_token);
-        poolBalance = token.balanceOf(address(this));
     }
 
-    function flashLoan(uint256 amount) external {
-        require(amount <= poolBalance, "Not enough liquidity");
+    modifier onlyLiquidityProvider() {
+        require(msg.sender == liquidityProvider, "Not liquidity provider");
+        _;
+    }
+
+    function depositLiquidity(uint256 amount) external onlyLiquidityProvider {
+        require(token.transferFrom(msg.sender, address(this), amount), "Deposit failed");
+    }
+
+    function executeFlashLoan(uint256 amount, address borrower, bytes calldata data) external {
+        require(token.balanceOf(address(this)) >= amount, "Insufficient liquidity");
 
         uint256 initialBalance = token.balanceOf(address(this));
-        token.transfer(msg.sender, amount);
+        require(token.transfer(borrower, amount), "Loan transfer failed");
 
-        // Execute external smart contract logic
-        (bool success, ) = msg.sender.call(abi.encodeWithSignature("executeFlashLoan(uint256)", amount));
+        (bool success,) = borrower.call(data);
         require(success, "Flash loan execution failed");
 
         require(token.balanceOf(address(this)) >= initialBalance, "Loan not repaid");
-
-        emit LoanExecuted(msg.sender, amount);
+        emit LoanExecuted(borrower, amount);
     }
 }

@@ -1,39 +1,54 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.20;
 
 contract DecentralizedVoting {
-    struct Candidate {
-        string name;
-        uint256 voteCount;
+    struct Proposal {
+        string description;
+        uint voteCount;
     }
 
+    address public admin;
+    mapping(address => bool) public voters;
+    Proposal[] public proposals;
     mapping(address => bool) public hasVoted;
-    Candidate[] public candidates;
 
-    event Voted(address indexed voter, string candidate);
+    event ProposalCreated(uint indexed proposalId, string description);
+    event Voted(address indexed voter, uint indexed proposalId);
 
-    constructor(string[] memory candidateNames) {
-        for (uint256 i = 0; i < candidateNames.length; i++) {
-            candidates.push(Candidate({name: candidateNames[i], voteCount: 0}));
-        }
+    modifier onlyAdmin() {
+        require(msg.sender == admin, "Only admin can perform this action");
+        _;
     }
 
-    function vote(uint256 candidateIndex) public {
-        require(!hasVoted[msg.sender], "Already voted");
+    modifier onlyVoter() {
+        require(voters[msg.sender], "Only registered voters can vote");
+        _;
+    }
 
-        candidates[candidateIndex].voteCount++;
+    constructor() {
+        admin = msg.sender;
+    }
+
+    function registerVoter(address voter) external onlyAdmin {
+        voters[voter] = true;
+    }
+
+    function createProposal(string memory description) external onlyAdmin {
+        proposals.push(Proposal(description, 0));
+        emit ProposalCreated(proposals.length - 1, description);
+    }
+
+    function vote(uint proposalId) external onlyVoter {
+        require(!hasVoted[msg.sender], "Voter has already voted");
+        require(proposalId < proposals.length, "Invalid proposal ID");
+
+        proposals[proposalId].voteCount++;
         hasVoted[msg.sender] = true;
-
-        emit Voted(msg.sender, candidates[candidateIndex].name);
+        emit Voted(msg.sender, proposalId);
     }
 
-    function getWinner() public view returns (string memory winner) {
-        uint256 maxVotes = 0;
-        for (uint256 i = 0; i < candidates.length; i++) {
-            if (candidates[i].voteCount > maxVotes) {
-                maxVotes = candidates[i].voteCount;
-                winner = candidates[i].name;
-            }
-        }
+    function getProposal(uint proposalId) external view returns (string memory, uint) {
+        require(proposalId < proposals.length, "Invalid proposal ID");
+        return (proposals[proposalId].description, proposals[proposalId].voteCount);
     }
 }

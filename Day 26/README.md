@@ -1,34 +1,63 @@
- 📌 Day 26: NFT Auction Smart Contract
+# NFT Auction
 
- 🔍 Overview
-For **Day 26** of my **100 Smart Contracts in 100 Days Challenge**, I built an **NFT Auction Smart Contract** in Solidity. This contract allows users to auction their NFTs, place bids, and transfer ownership to the highest bidder.
+![Solidity](https://img.shields.io/badge/Solidity-^0.8.20-blue)  
+![Hardhat](https://img.shields.io/badge/Hardhat-%E2%9C%94-yellow)  
+![Ethereum](https://img.shields.io/badge/Ethereum-Smart%20Contracts-green)  
 
- 📜 Key Concepts
+## 📅 **NFT Auction Smart Contract**  
 
-✅ **Auction Mechanism**
- Sellers can list their NFTs for auction with a minimum bid.
- Bidders compete to offer the highest bid before the auction ends.
- The highest bidder wins when the auction concludes.
+### 🔍 **Overview**  
+Today, I built an **NFT Auction** smart contract that allows users to create and bid on NFT auctions in a decentralized manner. This ensures fair bidding and secure transfers of NFTs.  
 
-✅ **Security Features**
- Uses **ReentrancyGuard** to prevent reentrancy attacks.
- Implements **pendingReturns** to allow safe withdrawal of overbid funds.
+### 📜 **Key Features**  
+✅ **Auction Creation** – Users can list their NFTs for auction with a starting price and duration  
+✅ **Bidding Mechanism** – Participants can place bids, with only the highest bid being valid  
+✅ **Secure NFT Transfers** – Ensures the highest bidder receives the NFT after auction completion  
 
-✅ **Smart Contract Functions**
- `startAuction(tokenId, minBid)`: Seller lists an NFT for auction.
- `bid(tokenId)`: Users place bids higher than the current highest bid.
- `withdraw(tokenId)`: Previous bidders can reclaim their unsuccessful bids.
- `endAuction(tokenId)`: Transfers NFT to the highest bidder and pays the seller.
+### 🛠️ **How It Works**  
+1️⃣ **Seller lists** an NFT with a minimum starting price and auction duration  
+2️⃣ **Bidders compete** by placing bids, ensuring only the highest bid is recorded  
+3️⃣ When the auction ends, **the highest bidder wins** and receives the NFT  
 
- 🛠️ Deployment & Testing
- Requires deployment with an **ERC721 NFT contract address**.
- Can be tested using **Remix**, **Hardhat**, or **Truffle**.
- Bidding and auction interactions can be simulated in a local blockchain environment.
+### 🚀 **Setup and Running the Project**  
+#### **1️⃣ Install Dependencies**  
+Ensure you have **Node.js** and **npm** installed. Then, run:  
+```sh  
+npm install  
+```
 
- 🔗 Next Steps
-🔹 Add **time extensions** for last-minute bids.  
-🔹 Implement **royalty mechanisms** for NFT creators.  
-🔹 Integrate with a frontend using **Web3.js** or **ethers.js**.  
+#### **2️⃣ Compile the Smart Contract**  
+```sh  
+npx hardhat compile  
+```
+
+#### **3️⃣ Deploy the Contract**  
+To deploy on a local Hardhat network:
+```sh
+npx hardhat node  
+npx hardhat run scripts/deploy.js --network localhost  
+```
+To deploy on Sepolia or another testnet, add the network configuration in **hardhat.config.js** and use:  
+```sh
+npx hardhat run scripts/deploy.js --network sepolia  
+```
+
+#### **4️⃣ Run Tests**  
+```sh  
+npx hardhat test  
+```
+
+### 🔗 **Next Steps**  
+- Implement **event logging** for better tracking  
+- Add **bid extensions** if bids are placed near the auction end  
+- Introduce **minimum bid increments** to prevent spamming  
+
+### 🌐 **GitHub Repository**  
+[🔗 NFT Auction Source Code](https://github.com/your-repository-link)  
+
+---  
+#NFTAuction #Blockchain #Solidity #Ethereum #SmartContracts #Web3 🚀
+
 
 #100DaysOfCode #Web3 #Solidity #SmartContracts #Ethereum #NFTs #Auction #Blockchain
 

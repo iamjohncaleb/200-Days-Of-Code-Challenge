@@ -1,23 +1,14 @@
 const hre = require("hardhat");
 
 async function main() {
-    const [deployer] = await hre.ethers.getSigners();
-    console.log(`Deploying contracts with the account: ${deployer.address}`);
+  const TokenVesting = await hre.ethers.getContractFactory("TokenVesting");
+  const tokenVesting = await TokenVesting.deploy("0xTokenAddress", "0xBeneficiaryAddress", 1700000000, 1705000000, 1000);
 
-    // Deploy the TokenVesting contract
-    const TokenVesting = await hre.ethers.getContractFactory("TokenVesting");
-    const tokenAddress = "0xTokenAddressHere"; // Replace with actual token address
-    const beneficiary = "0xBeneficiaryAddressHere"; // Replace with actual beneficiary address
-    const startTime = Math.floor(Date.now() / 1000); // Current timestamp
-    const releaseTime = startTime + 60 * 60 * 24 * 30; // 30 days from now
-    const amount = hre.ethers.utils.parseEther("100"); // Adjust token amount as needed
-    
-    const vesting = await TokenVesting.deploy(tokenAddress, beneficiary, startTime, releaseTime, amount);
-    await vesting.deployed();
-    console.log(`TokenVesting deployed at: ${vesting.address}`);
+  await tokenVesting.deployed();
+  console.log("TokenVesting deployed to:", tokenVesting.address);
 }
 
 main().catch((error) => {
-    console.error(error);
-    process.exitCode = 1;
+  console.error(error);
+  process.exitCode = 1;
 });

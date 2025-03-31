@@ -1,34 +1,58 @@
- 🗳️ Day 28: Decentralized Voting Smart Contract  
+# Decentralized Voting
 
- 🔍 Overview  
-For **Day 28** of my **100 Smart Contracts in 100 Days Challenge**, I built a **Decentralized Voting Smart Contract** in Solidity. This contract allows users to vote securely and transparently on the blockchain.  
+![Solidity](https://img.shields.io/badge/Solidity-^0.8.20-blue)
+![Hardhat](https://img.shields.io/badge/Hardhat-%E2%9C%94-yellow)
+![Ethereum](https://img.shields.io/badge/Ethereum-Smart%20Contracts-green)
 
- 📜 Key Features  
+## 📅 **Decentralized Voting Smart Contract**
 
-✅ **Candidate Registration**  
- Candidates are registered during contract deployment.  
- Voters can choose from a predefined list of candidates.  
+### 🔍 **Overview**
+Today, I built a **Decentralized Voting** smart contract that enables secure, tamper-proof voting on the blockchain.
 
-✅ **Secure Voting System**  
- Each voter can **vote only once**.  
- Votes are **immutable** and stored on-chain.  
+### 📜 **Key Features**
+✅ **Admin-Managed Voter Registration** – Only authorized users can vote
+✅ **Proposal Creation** – Admins can create multiple proposals
+✅ **Transparent Voting** – Votes are stored immutably on-chain
 
-✅ **Fair Election Process**  
- The contract keeps track of each candidate’s vote count.  
- A function retrieves the **winner** based on the highest votes.  
+### 🛠️ **How It Works**
+1️⃣ **Admin registers** voters
+2️⃣ **Admin creates** proposals
+3️⃣ **Voters cast** their votes securely
 
- 🛠️ Smart Contract Functions  
+### 🚀 **Setup and Running the Project**
+#### **1️⃣ Install Dependencies**
+```sh
+npm install
+```
 
- `vote(candidateIndex)`: Allows users to vote for a candidate by index.  
- `getWinner()`: Returns the name of the candidate with the most votes.  
+#### **2️⃣ Compile the Smart Contract**
+```sh
+npx hardhat compile
+```
 
- 🛠️ Deployment & Testing  
- Deployed on a **local blockchain** using Remix or Hardhat.  
- Tested by casting votes and retrieving the winner.  
+#### **3️⃣ Deploy the Contract**
+To deploy on a local Hardhat network:
+```sh
+npx hardhat node  
+npx hardhat run scripts/deploy.js --network localhost
+```
+To deploy on Sepolia or another testnet, add the network configuration in **hardhat.config.js** and use:
+```sh
+npx hardhat run scripts/deploy.js --network sepolia
+```
 
- 🔗 Next Steps  
-🔹 Implement **role-based access control** for election authorities.  
-🔹 Add **vote verification** using cryptographic signatures.  
-🔹 Enable **real-time vote tallying** via a frontend with **Web3.js**.  
+#### **4️⃣ Run Tests**
+```sh
+npx hardhat test
+```
 
-#100DaysOfCode #Web3 #Solidity #SmartContracts #Ethereum #Voting #Blockchain  
+### 🔗 **Next Steps**
+- Implement **anonymous voting**
+- Add **vote delegation** for better accessibility
+- Introduce **voter eligibility criteria**
+
+### 🌐 **GitHub Repository**
+[🔗 Decentralized Voting Source Code](https://github.com/your-repository-link)
+
+---
+#DecentralizedVoting #Blockchain #Solidity #Ethereum #SmartContracts #Web3 🚀

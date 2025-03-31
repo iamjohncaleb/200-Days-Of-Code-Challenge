@@ -1,35 +1,37 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.20;
 
 contract DecentralizedID {
     struct Identity {
         string name;
         string email;
-        uint256 dateOfBirth;
-        bool verified;
+        string metadata;
+        bool exists;
     }
 
-    mapping(address => Identity) public identities;
-    address public admin;
+    mapping(address => Identity) private identities;
 
-    event IdentityRegistered(address indexed user, string name);
-    event IdentityVerified(address indexed user);
+    event IdentityCreated(address indexed user, string name, string email, string metadata);
+    event IdentityUpdated(address indexed user, string name, string email, string metadata);
 
-    constructor() {
-        admin = msg.sender;
+    function createIdentity(string memory name, string memory email, string memory metadata) public {
+        require(!identities[msg.sender].exists, "Identity already exists");
+        
+        identities[msg.sender] = Identity(name, email, metadata, true);
+        emit IdentityCreated(msg.sender, name, email, metadata);
     }
 
-    function registerIdentity(string memory _name, string memory _email, uint256 _dob) public {
-        require(bytes(identities[msg.sender].name).length == 0, "Already registered");
-
-        identities[msg.sender] = Identity(_name, _email, _dob, false);
-        emit IdentityRegistered(msg.sender, _name);
+    function updateIdentity(string memory name, string memory email, string memory metadata) public {
+        require(identities[msg.sender].exists, "Identity does not exist");
+        
+        identities[msg.sender] = Identity(name, email, metadata, true);
+        emit IdentityUpdated(msg.sender, name, email, metadata);
     }
 
-    function verifyIdentity(address _user) public {
-        require(msg.sender == admin, "Only admin can verify");
-
-        identities[_user].verified = true;
-        emit IdentityVerified(_user);
+    function getIdentity(address user) public view returns (string memory, string memory, string memory) {
+        require(identities[user].exists, "Identity does not exist");
+        
+        Identity memory id = identities[user];
+        return (id.name, id.email, id.metadata);
     }
 }
