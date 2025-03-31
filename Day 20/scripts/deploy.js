@@ -1,17 +1,17 @@
-const hre = require("hardhat");
+const { ethers } = require("hardhat");
 
 async function main() {
-    const [deployer] = await hre.ethers.getSigners();
-    console.log(`Deploying contracts with the account: ${deployer.address}`);
+    const [deployer] = await ethers.getSigners();
+    console.log("Deploying contract with account:", deployer.address);
 
-    // Deploy the EnhancedNFT contract
-    const EnhancedNFT = await hre.ethers.getContractFactory("EnhancedNFT");
-    const maxSupply = 10000;
-    const mintPrice = hre.ethers.parseEther("0.05");
-    
-    const nftContract = await EnhancedNFT.deploy(maxSupply, mintPrice);
-    await nftContract.waitForDeployment();
-    console.log(`EnhancedNFT deployed at: ${await nftContract.getAddress()}`);
+    const WarFundCrowdfunding = await ethers.getContractFactory("WarFundCrowdfunding");
+    const goal = ethers.utils.parseEther("100"); // Example goal: 100 ETH
+    const duration = 30 * 24 * 60 * 60; // 30 days
+
+    const crowdfunding = await WarFundCrowdfunding.deploy(goal, duration);
+    await crowdfunding.deployed();
+
+    console.log("WarFundCrowdfunding deployed to:", crowdfunding.address);
 }
 
 main().catch((error) => {

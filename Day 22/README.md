@@ -1,47 +1,37 @@
- 📌 Day 22: Solidity Escrow Smart Contract
+# Escrow Smart Contract
 
- 🔍 Overview
-For **Day 22** of my **200 Days of Code Challenge**, I built an **Escrow Smart Contract** in Solidity. This contract securely holds funds until specific conditions are met, ensuring trust in transactions between a buyer and a seller.
+![Solidity](https://img.shields.io/badge/Solidity-^0.8.20-blue)
+![Hardhat](https://img.shields.io/badge/Hardhat-%E2%9C%94-yellow)
+![Ethereum](https://img.shields.io/badge/Ethereum-Smart%20Contracts-green)
 
- 📜 Key Concepts
+## 📅 **Escrow Smart Contract**
 
- ✅ **Escrow Mechanism**
- An intermediary (arbiter) ensures that funds are released only when conditions are satisfied.
- Provides security for both parties in a transaction.
+### 🔍 **Overview**
+A decentralized escrow smart contract that ensures fair transactions between buyers and sellers.
 
- ✅ **State Variables**
- `buyer`: The address that deposits funds.
- `seller`: The recipient of the funds.
- `arbiter`: The trusted third party who can authorize fund release.
- `amount`: The amount of ETH deposited in escrow.
- `isFunded`: Tracks if the escrow has received funds.
- `isReleased`: Indicates whether the funds have been released.
+### 📜 **Key Features**
+✅ **Buyer funds escrow** – Ensures seller gets paid only after conditions are met  
+✅ **Arbiter resolves disputes** – Provides an extra layer of security  
+✅ **Funds can be refunded or released** – Ensures fair handling of transactions  
 
- ✅ **Core Functions**
- `deposit()`: Allows the buyer to fund the escrow.
- `releaseFunds()`: Allows either the buyer or the arbiter to release funds to the seller.
-
- ✅ **Access Control**
- Only the **buyer** can deposit funds.
- Only the **buyer** or **arbiter** can release funds.
-
- ✅ **Event Logging**
- `Deposited()`: Emitted when funds are deposited.
- `Released()`: Emitted when funds are successfully released.
-
- ⚠️ **Security Considerations**
- **Trust in the Arbiter**: The contract assumes the arbiter will act fairly. Consider **multi-signature approval** for decentralized decision-making.
- **Reentrancy Protection**: Implement **checks-effects-interactions pattern** or **ReentrancyGuard** to enhance security.
- **Dispute Resolution**: Future improvements could integrate an **arbitration mechanism** for handling disputes.
-
- 🛠️ Deployment & Testing
- Deploy using **Remix**, **Hardhat**, or **Truffle**.
- The buyer deposits ETH into the contract.
- The buyer or arbiter releases funds to the seller when conditions are met.
-
- 🔗 Next Steps
-🔹 Implement **multi-signature release approval**.  
-🔹 Add **time-lock functionality** to auto-release funds after a deadline.  
-🔹 Develop a **frontend dApp** for an improved user experience.  
-
-#200DaysOfCode #Web3 #Solidity #SmartContracts #Ethereum #Blockchain #Escrow #Security #RemixIDE
+### 🚀 **Setup and Running the Project**
+#### **1️⃣ Install Dependencies**
+```sh
+npm install
+```
+#### **2️⃣ Compile the Smart Contract**
+```sh
+npx hardhat compile
+```
+#### **3️⃣ Deploy the Contract**
+```sh
+npx hardhat run scripts/deploy_escrow_smartcontract.js --network goerli
+```
+#### **4️⃣ Run Tests**
+```sh
+npx hardhat test
+```
+### 🔗 **Next Steps**
+- Implement **multi-party arbitration**
+- Add **time-based auto-release of funds**
+- Introduce **deposit withdrawal functionality**

@@ -1,25 +1,37 @@
-## **Day 20: War Fund Crowdfunding Smart Contract**  
+# WarFund Crowdfunding Smart Contract
 
-### 🔍 **Overview**  
-This **War Fund Crowdfunding contract** allows users to **donate ETH** towards a cause with a **funding goal** and **deadline**. If the goal is met, the owner withdraws the funds; otherwise, contributors can request refunds.  
+![Solidity](https://img.shields.io/badge/Solidity-^0.8.20-blue)
+![Hardhat](https://img.shields.io/badge/Hardhat-%E2%9C%94-yellow)
+![Ethereum](https://img.shields.io/badge/Ethereum-Smart%20Contracts-green)
 
-### 📜 **Key Features**  
-✅ **ETH Donations** – Users can contribute to the war fund  
-✅ **Funding Goal & Deadline** – Ensures structured fundraising  
-✅ **Secure Withdrawals** – Only the owner can withdraw funds when the goal is reached  
-✅ **Refund Mechanism** – Contributors can reclaim their ETH if the goal isn’t met  
-✅ **Transparency** – Tracks all donors and contributions  
+## 📅 **WarFund Crowdfunding Smart Contract**
 
-### 🛠️ **How It Works**  
-1️⃣ The **contract owner** sets the **funding goal** and **deadline** during deployment  
-2️⃣ **Users donate ETH**, and their contributions are recorded  
-3️⃣ If the **goal is met by the deadline**, the owner **withdraws the funds**  
-4️⃣ If the **goal isn’t met**, contributors can **request refunds**  
+### 🔍 **Overview**
+This contract allows for decentralized crowdfunding where donations are collected to meet a funding goal. If the goal is met, funds are withdrawn. If not, donors can claim refunds.
 
-### 🔗 **Next Steps**  
-- Implement **tiered rewards** for donors based on contribution amounts  
-- Introduce **partial withdrawals** if milestones are reached before the deadline  
-- Add **multi-signature approval** for fund withdrawals  
-- Enable **off-chain data tracking** for transparency and audits  
+### 📜 **Key Features**
+✅ **Secure Donations** – Contributors can donate and track their funds  
+✅ **Refund Mechanism** – If the goal isn't met, donors can reclaim their funds  
+✅ **Goal-Based Withdrawal** – Owner can withdraw funds only if the target is achieved  
 
-#Day20 #200DaysOfCode #Solidity #Blockchain #Crypto #Crowdfunding 🚀
+### 🚀 **Setup and Running the Project**
+#### **1️⃣ Install Dependencies**
+```sh
+npm install
+```
+#### **2️⃣ Compile the Smart Contract**
+```sh
+npx hardhat compile
+```
+#### **3️⃣ Deploy the Contract**
+```sh
+npx hardhat run scripts/deploy_warfund_crowdfunding.js --network goerli
+```
+#### **4️⃣ Run Tests**
+```sh
+npx hardhat test
+```
+### 🔗 **Next Steps**
+- Implement **donation milestones**
+- Add **time-locked withdrawals**
+- Introduce **NFT-based contribution rewards**

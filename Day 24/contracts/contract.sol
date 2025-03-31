@@ -1,37 +1,56 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.20;
 
-contract P2PLending {
+import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+
+contract P2PLendingSmartContract {
+    IERC20 public lendingToken;
+    address public owner;
+    uint256 public interestRate;
+
     struct Loan {
         address borrower;
         uint256 amount;
-        uint256 interest;
+        uint256 dueDate;
         bool repaid;
     }
 
-    mapping(address => Loan[]) public loans;
-    mapping(address => uint256) public lenderBalance;
+    mapping(address => Loan) public loans;
 
-    event LoanRequested(address indexed borrower, uint256 amount);
+    event LoanRequested(address indexed borrower, uint256 amount, uint256 dueDate);
     event LoanRepaid(address indexed borrower, uint256 amount);
 
-    function requestLoan(uint256 _amount, uint256 _interest) public {
-        loans[msg.sender].push(Loan(msg.sender, _amount, _interest, false));
-        emit LoanRequested(msg.sender, _amount);
+    constructor(address _lendingToken, uint256 _interestRate) {
+        lendingToken = IERC20(_lendingToken);
+        owner = msg.sender;
+        interestRate = _interestRate;
     }
 
-    function lend() public payable {
-        lenderBalance[msg.sender] += msg.value;
+    modifier onlyOwner() {
+        require(msg.sender == owner, "Not contract owner");
+        _;
     }
 
-    function repayLoan(uint256 _loanIndex) public payable {
-        Loan storage loan = loans[msg.sender][_loanIndex];
-        require(!loan.repaid, "Already repaid");
-        require(msg.value >= loan.amount + loan.interest, "Insufficient amount");
+    function requestLoan(uint256 _amount, uint256 _duration) external {
+        require(loans[msg.sender].amount == 0, "Existing loan must be repaid first");
+        require(lendingToken.transfer(msg.sender, _amount), "Transfer failed");
+        
+        loans[msg.sender] = Loan(msg.sender, _amount, block.timestamp + _duration, false);
+        emit LoanRequested(msg.sender, _amount, block.timestamp + _duration);
+    }
 
+    function repayLoan() external {
+        Loan storage loan = loans[msg.sender];
+        require(loan.amount > 0, "No active loan");
+        require(block.timestamp <= loan.dueDate, "Loan overdue");
+        
+        uint256 interest = (loan.amount * interestRate) / 100;
+        uint256 repaymentAmount = loan.amount + interest;
+        require(lendingToken.transferFrom(msg.sender, address(this), repaymentAmount), "Transfer failed");
+        
         loan.repaid = true;
-        payable(msg.sender).transfer(msg.value);
+        delete loans[msg.sender];
 
-        emit LoanRepaid(msg.sender, msg.value);
+        emit LoanRepaid(msg.sender, repaymentAmount);
     }
 }
