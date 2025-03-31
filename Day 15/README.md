@@ -1,23 +1,58 @@
-📅 **Day 15: Subscription Service Smart Contract**  
+# Subscription Service
 
-🔍 **Overview**  
-Today's Solidity project is a **Subscription Service Smart Contract** that enables users to subscribe for a fixed period by paying a fee.  
+![Solidity](https://img.shields.io/badge/Solidity-^0.8.20-blue)
+![Hardhat](https://img.shields.io/badge/Hardhat-%E2%9C%94-yellow)
+![Ethereum](https://img.shields.io/badge/Ethereum-Smart%20Contracts-green)
 
-📜 **Key Features**  
-✅ **Subscription Management** – Users can subscribe for **30 days** by paying a set fee  
-✅ **Fee Validation** – Ensures correct payment before subscription is activated  
-✅ **Subscription Status Check** – Allows users to check if their subscription is active  
-✅ **Owner Withdrawals** – The contract owner can withdraw funds collected  
+## 📅 **Subscription Service Smart Contract**
 
-🛠️ **How It Works**  
-1️⃣ Deploy the contract and set the **subscription fee**  
-2️⃣ Users call `subscribe()` and pay the required fee  
-3️⃣ Their subscription remains active for **30 days**  
-4️⃣ The owner can **withdraw funds** collected from subscriptions  
+### 🔍 **Overview**
+Today, I built a **Subscription Service** smart contract that allows users to subscribe by paying a fee, granting access for a fixed period.
 
-🔗 **Next Steps**  
-- Implement **auto-renewal** for seamless subscriptions  
-- Add a **refund policy** for accidental overpayments  
-- Introduce **tiered subscription plans** with different durations  
+### 📜 **Key Features**
+✅ **Pay-to-Subscribe** – Users pay a fixed fee to subscribe for 30 days
+✅ **Subscription Check** – Users can verify their active subscription status
+✅ **Owner Withdrawals** – The contract owner can withdraw collected funds
 
-#Day15 #200DaysOfCode #Solidity #Web3 #SmartContracts #Blockchain 🚀
+### 🛠️ **How It Works**
+1️⃣ **Users send a fixed fee** to subscribe
+2️⃣ **Subscription lasts for 30 days** before renewal is required
+3️⃣ **The contract owner can withdraw** accumulated funds
+
+### 🚀 **Setup and Running the Project**
+#### **1️⃣ Install Dependencies**
+```sh
+npm install
+```
+
+#### **2️⃣ Compile the Smart Contract**
+```sh
+npx hardhat compile
+```
+
+#### **3️⃣ Deploy the Contract**
+To deploy on a local Hardhat network:
+```sh
+npx hardhat node  
+npx hardhat run scripts/deploy.js --network localhost
+```
+To deploy on Sepolia or another testnet, add the network configuration in **hardhat.config.js** and use:
+```sh
+npx hardhat run scripts/deploy.js --network sepolia
+```
+
+#### **4️⃣ Run Tests**
+```sh
+npx hardhat test
+```
+
+### 🔗 **Next Steps**
+- Implement **tiered subscription plans**
+- Add **automated renewals** with smart contract logic
+- Introduce **refund functionality** for early cancellations
+
+### 🌐 **GitHub Repository**
+[🔗 Subscription Service Source Code](https://github.com/your-repository-link)
+
+---
+#SubscriptionService #Blockchain #Solidity #Ethereum #SmartContracts #Web3 🚀

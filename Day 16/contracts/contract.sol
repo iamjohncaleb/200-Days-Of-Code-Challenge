@@ -1,41 +1,35 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.20;
 
-contract Escrow {
-    address public buyer;
-    address public seller;
+contract AdvancedEscrow {
+    address public payer;
+    address public payee;
     address public arbiter;
     uint256 public amount;
+    bool public isReleased;
 
-    event FundsDeposited(address indexed buyer, uint256 amount);
-    event FundsReleased(address indexed seller, uint256 amount);
-    
-    constructor(address _seller, address _arbiter) payable {
-        buyer = msg.sender;
-        seller = _seller;
+    event Deposited(address indexed payer, uint256 amount);
+    event Released(address indexed payee, uint256 amount);
+
+    modifier onlyArbiter() {
+        require(msg.sender == arbiter, "Only arbiter can release funds");
+        _;
+    }
+
+    constructor(address _payee, address _arbiter) payable {
+        require(msg.value > 0, "Must deposit funds");
+        payer = msg.sender;
+        payee = _payee;
         arbiter = _arbiter;
         amount = msg.value;
-        require(amount > 0, "Deposit required");
-        emit FundsDeposited(buyer, amount);
+        isReleased = false;
+        emit Deposited(msg.sender, msg.value);
     }
 
-    function releaseFunds() public {
-        require(msg.sender == buyer || msg.sender == arbiter, "Unauthorized");
-        require(amount > 0, "No funds to release");
-
-        uint256 payment = amount;
-        amount = 0;
-        payable(seller).transfer(payment);
-
-        emit FundsReleased(seller, payment);
-    }
-
-    function refundBuyer() public {
-        require(msg.sender == arbiter, "Only arbiter can refund");
-        require(amount > 0, "No funds to refund");
-
-        uint256 refundAmount = amount;
-        amount = 0;
-        payable(buyer).transfer(refundAmount);
+    function releaseFunds() public onlyArbiter {
+        require(!isReleased, "Funds already released");
+        isReleased = true;
+        payable(payee).transfer(amount);
+        emit Released(payee, amount);
     }
 }
