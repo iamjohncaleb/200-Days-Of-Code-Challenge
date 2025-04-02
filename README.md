@@ -1,7 +1,6 @@
 <div align="center">
   <br />
-    <a href="https://www.instagram.com/legendary_consult/" target="_blank">
-      <img src="[https://your-uploaded-image-url](https://github.com/iamjohncaleb/200-Days-Of-Code-Challenge/issues/1#issue-2966102555))](https://github.com/iamjohncaleb/200-Days-Of-Code-Challenge/issues/1#issue-2966102555" alt="Project Banner">
+      <img src="https://github.com/iamjohncaleb/200-Days-Of-Code-Challenge/issues/1#issue-2966102555" alt="Project Banner">
     </a>
 
   <div>
