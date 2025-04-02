@@ -1,3 +1,7 @@
+[![Project Banner](https://your-uploaded-image-url)](https://github.com/iamjohncaleb/200-Days-Of-Code-Challenge/issues/1#issue-2966102555)
+
+
+
 # 🚀 200 Days of Code Challenge
 
 ## 🏆 About the Challenge
