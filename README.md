@@ -71,8 +71,8 @@ Each folder will contain the project for that day, including **source code, smar
 
 ## 🚀 How to Follow My Journey
 🔹 **GitHub**: All code will be available here in this repository.  
-🔹 **LinkedIn & Twitter**: Regular updates on my progress, key learnings, and project highlights.  
-🔹 **YouTube (Melodies from Eden)**: Occasional video breakdowns of key projects.  
+🔹 **LinkedIn & Twitter**(Iamjohncalebb): Regular updates on my progress, key learnings, and project highlights.  
+🔹 **YouTube (Iamjohncaleb)**: Occasional video breakdowns of key projects.  
 
 ## 📢 Let's Connect & Build Together!
 I’d love to connect with fellow developers, Web3 enthusiasts, and anyone interested in blockchain development. Feel free to share feedback, suggestions, or just say hi! 🎉  
