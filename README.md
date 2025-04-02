@@ -1,8 +1,20 @@
-[![Project Banner](https://your-uploaded-image-url)](https://github.com/iamjohncaleb/200-Days-Of-Code-Challenge/issues/1#issue-2966102555)
+<div align="center">
+  <br />
+    <a href="https://www.instagram.com/legendary_consult/" target="_blank">
+      <img src="https://your-uploaded-image-url)](https://github.com/iamjohncaleb/200-Days-Of-Code-Challenge/issues/1#issue-2966102555" alt="Project Banner">
+    </a>
 
+  <div>
+    <img src="https://img.shields.io/badge/solidity-363636?style=for-the-badge&logo=solidity&logoColor=white" />
+    <img src="https://img.shields.io/badge/-Next_JS-black?style=for-the-badge&logoColor=white&logo=nextdotjs&color=000000" alt="nextdotjs" />
+    <img src="https://img.shields.io/badge/web3.js-F16822?style=for-the-badge&logo=web3dotjs&logoColor=white" />
+    <img src="https://img.shields.io/badge/hardhat-F3BA2F?style=for-the-badge&logo=ethereum&logoColor=black" />
+    <img src="https://img.shields.io/badge/solana-9945FF?style=for-the-badge&logo=solana&logoColor=white" />
+  </div>
 
+  <h3 align="center">🚀 200 Days of Code Challenge</h3>
+</div>
 
-# 🚀 200 Days of Code Challenge
 
 ## 🏆 About the Challenge
 Starting **March 15, 2025**, I am embarking on a **200 Days of Code** journey to enhance my **Web3 Fullstack Development** skills and showcase my progress. Over the next 200 days, I'll be building fullstack applications, smart contracts, and exploring cutting-edge Web3 technologies.
