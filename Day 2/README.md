@@ -1,33 +1,58 @@
-# 📌 Day 2: Solidity TimeLock Smart Contract
+# Advanced TimeLock
 
-🔍 Overview
-For **Day 2** of my **200 Days of Code Challenge**, I built a **TimeLock Smart Contract** in Solidity. This contract locks funds for a specified period before allowing withdrawals.
+![Solidity](https://img.shields.io/badge/Solidity-^0.8.20-blue)
+![Hardhat](https://img.shields.io/badge/Hardhat-%E2%9C%94-yellow)
+![Ethereum](https://img.shields.io/badge/Ethereum-Smart%20Contracts-green)
 
-## 📜 Key Concepts
+## 📅 **Advanced TimeLock Smart Contract**
 
- ✅ **Solidity Basics**
- **SPDX License & Pragma Version**: Specifies the open-source license and Solidity version (`^0.8.0`).
- **Contract Declaration**: Defines the `TimeLock` contract.
+### 🔍 **Overview**
+Today, I built an **Advanced TimeLock** smart contract that allows funds or operations to be locked until a specified unlock time, ensuring delayed execution.
 
- ✅ **State Variables**
- `unlockTime`: Stores the timestamp when funds can be withdrawn.
- `owner`: Stores the address of the contract deployer.
+### 📜 **Key Features**
+✅ **Lock Mechanism** – Funds or execution locked until a set time
+✅ **Time-based Access Control** – Unlock only after the predefined timestamp
+✅ **Secure Execution** – Prevents premature unlocking
 
- ✅ **Constructor Function**
- Accepts `_time` as an input and sets `unlockTime` by adding `_time` to the current block timestamp.
- Assigns the deployer (`msg.sender`) as the contract `owner`.
+### 🛠️ **How It Works**
+1️⃣ **Owner sets the unlock time upon deployment**
+2️⃣ **Funds or operations remain locked until the set time**
+3️⃣ **Owner can unlock once the unlock time is reached**
 
- ✅ **Withdrawal Function**
- `withdraw()`: Allows withdrawal only after `unlockTime` has passed.
- Uses `require()` to enforce the time lock and prevent premature withdrawals.
+### 🚀 **Setup and Running the Project**
+#### **1️⃣ Install Dependencies**
+```sh
+npm install
+```
 
- 🛠️ Deployment & Testing
- Can be deployed and tested using **Remix**, **Hardhat**, or **Truffle**.
- Interact by setting `_time` during deployment and attempting withdrawal before and after `unlockTime`.
+#### **2️⃣ Compile the Smart Contract**
+```sh
+npx hardhat compile
+```
 
-🔗 Next Steps
-🔹 Implement actual fund transfer logic.  
-🔹 Add role-based access control for withdrawals.  
-🔹 Extend functionality for multiple beneficiaries.  
+#### **3️⃣ Deploy the Contract**
+To deploy on a local Hardhat network:
+```sh
+npx hardhat node  
+npx hardhat run scripts/deploy.js --network localhost
+```
+To deploy on Sepolia or another testnet, add the network configuration in **hardhat.config.js** and use:
+```sh
+npx hardhat run scripts/deploy.js --network sepolia
+```
 
-#200DaysOfCode #Web3 #Solidity #SmartContracts #Ethereum #Blockchain #TimeLock #RemixIDE
+#### **4️⃣ Run Tests**
+```sh
+npx hardhat test
+```
+
+### 🔗 **Next Steps**
+- Implement **funds locking mechanism**
+- Add **multi-signature unlock support**
+- Integrate **frontend UI for tracking lock status**
+
+### 🌐 **GitHub Repository**
+[🔗 Advanced TimeLock Source Code](https://github.com/your-repository-link)
+
+---
+#AdvancedTimeLock #Blockchain #Solidity #Ethereum #SmartContracts #Web3 🚀

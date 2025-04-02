@@ -1,29 +1,58 @@
-# 📌 Day 1: Solidity Calculator Smart Contract
+# Advanced Calculator
 
- 🔍 Overview
-For **Day 1** of my **200 Days of Code Challenge**, I built a simple **Calculator Smart Contract** in Solidity. This contract performs basic arithmetic operations: addition, subtraction, multiplication, and division.
+![Solidity](https://img.shields.io/badge/Solidity-^0.8.20-blue)
+![Hardhat](https://img.shields.io/badge/Hardhat-%E2%9C%94-yellow)
+![Ethereum](https://img.shields.io/badge/Ethereum-Smart%20Contracts-green)
 
-## 📜 Key Concepts
+## 📅 **Advanced Calculator Smart Contract**
 
- ✅ **Solidity Basics**
- **SPDX License & Pragma Version**: Specifies open-source license and Solidity version (`^0.8.0`).
- **Contract Declaration**: Defines the `Calculator` contract.
+### 🔍 **Overview**
+Today, I built an **Advanced Calculator** smart contract that performs basic arithmetic operations such as addition, subtraction, multiplication, and division.
 
- ✅ **Function Modifiers**
- `public`: Allows external access to functions.
- `pure`: Ensures functions do not modify or read blockchain state.
+### 📜 **Key Features**
+✅ **Addition, Subtraction, Multiplication, and Division** – Performs standard arithmetic operations
+✅ **Error Handling** – Prevents division by zero
+✅ **Efficient Computation** – Uses Solidity's built-in mathematical functions
 
- ✅ **Arithmetic Operations**
- `add()`, `subtract()`, `multiply()`, and `divide()` perform basic math operations.
- `divide()` includes a `require` statement to prevent division by zero.
+### 🛠️ **How It Works**
+1️⃣ **Users call functions** to perform calculations
+2️⃣ **Smart contract returns the result**
+3️⃣ **Division is safeguarded against zero-division errors**
 
- 🛠️ Deployment & Testing
- Can be deployed and tested using **Remix**, **Hardhat**, or **Truffle**.
- Simple interactions allow calling functions with input values.
+### 🚀 **Setup and Running the Project**
+#### **1️⃣ Install Dependencies**
+```sh
+npm install
+```
 
-## 🔗 Next Steps
-🔹 I will Extend functionality with additional operations.  
-🔹 I will Optimize gas efficiency.  
-🔹 I will Integrate with a frontend using **Web3.js** or **ethers.js**.  
+#### **2️⃣ Compile the Smart Contract**
+```sh
+npx hardhat compile
+```
 
-#200DaysOfCode #Web3 #Solidity #SmartContracts #Ethereum #Blockchain #RemixIDE
+#### **3️⃣ Deploy the Contract**
+To deploy on a local Hardhat network:
+```sh
+npx hardhat node  
+npx hardhat run scripts/deploy.js --network localhost
+```
+To deploy on Sepolia or another testnet, add the network configuration in **hardhat.config.js** and use:
+```sh
+npx hardhat run scripts/deploy.js --network sepolia
+```
+
+#### **4️⃣ Run Tests**
+```sh
+npx hardhat test
+```
+
+### 🔗 **Next Steps**
+- Implement **exponential and modulus operations**
+- Add **support for floating-point arithmetic using fixed-point math**
+- Develop **a frontend integration for interactive use**
+
+### 🌐 **GitHub Repository**
+[🔗 Advanced Calculator Source Code](https://github.com/your-repository-link)
+
+---
+#AdvancedCalculator #Blockchain #Solidity #Ethereum #SmartContracts #Web3 🚀

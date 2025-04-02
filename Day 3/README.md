@@ -1,49 +1,58 @@
-# 📌 Day 3: Solidity Lottery Smart Contract
+# Advanced Lottery
 
- 🔍 Overview
-For **Day 3** of my **200 Days of Code Challenge**, I built a **Lottery Smart Contract** in Solidity. This contract allows players to enter the lottery by sending ETH, and the owner picks a random winner.
+![Solidity](https://img.shields.io/badge/Solidity-^0.8.20-blue)
+![Hardhat](https://img.shields.io/badge/Hardhat-%E2%9C%94-yellow)
+![Ethereum](https://img.shields.io/badge/Ethereum-Smart%20Contracts-green)
 
- 📜 Key Concepts
+## 📅 **Advanced Lottery Smart Contract**
 
- ✅ **Solidity Basics**
- **SPDX License & Pragma Version**: Specifies the open-source license and Solidity version (`^0.8.0`).
- **Contract Declaration**: Defines the `Lottery` contract.
+### 🔍 **Overview**
+Today, I built an **Advanced Lottery** smart contract that allows users to enter with a fixed fee, and a winner is randomly selected to receive the total prize pool.
 
- ✅ **State Variables**
- `players`: Stores the list of participants.
- `owner`: Stores the address of the contract deployer.
+### 📜 **Key Features**
+✅ **Entry Mechanism** – Users enter by paying a fixed fee  
+✅ **Random Winner Selection** – Ensures fair distribution of winnings  
+✅ **Secure Prize Payout** – The contract automatically transfers funds to the winner  
 
- ✅ **Entry Function**
- `enter()`: Allows players to enter the lottery by sending at least **0.01 ETH**.
- Uses `require()` to enforce the minimum entry fee.
- Adds the sender to the `players` array.
+### 🛠️ **How It Works**
+1️⃣ **Users enter** the lottery by sending 0.1 ETH  
+2️⃣ **Contract randomly picks a winner** when called by the manager  
+3️⃣ **Winner receives** the total prize pool automatically  
 
- ✅ **Winner Selection & Reward**
- `pickWinner()`: Can only be called by the contract **owner**.
- Ensures there are players before selecting a winner.
- Uses a `random()` function (pseudo-random) to pick a winner.
- Transfers the entire contract balance to the winner.
- Resets the `players` array for a new round.
+### 🚀 **Setup and Running the Project**
+#### **1️⃣ Install Dependencies**
+```sh
+npm install
+```
 
- ✅ **Randomness Function**
- `random()`: Generates a pseudo-random number using block variables.
- Uses `keccak256` hashing with `block.timestamp`, `block.difficulty`, and `players.length`.
+#### **2️⃣ Compile the Smart Contract**
+```sh
+npx hardhat compile
+```
 
- ✅ **Fallback Function**
- `receive() external payable {}`: Allows the contract to receive ETH directly.
+#### **3️⃣ Deploy the Contract**
+To deploy on a local Hardhat network:
+```sh
+npx hardhat node  
+npx hardhat run scripts/deploy.js --network localhost
+```
+To deploy on Sepolia or another testnet, add the network configuration in **hardhat.config.js** and use:
+```sh
+npx hardhat run scripts/deploy.js --network sepolia
+```
 
- ⚠️ **Security Considerations**
- The `random()` function is **not truly secure** as miners can influence `block.timestamp`.
- A better approach is using **Chainlink VRF** for verifiable randomness.
+#### **4️⃣ Run Tests**
+```sh
+npx hardhat test
+```
 
- 🛠️ Deployment & Testing
- Deploy using **Remix**, **Hardhat**, or **Truffle**.
- Players enter by sending ETH, and the owner picks a winner.
- The contract balance is transferred to the winner automatically.
+### 🔗 **Next Steps**
+- Implement **multiple winners** feature  
+- Add **chainlink VRF for provable randomness**  
+- Integrate **frontend UI for ticket purchases**  
 
- 🔗 Next Steps
-🔹 Implement **Chainlink VRF** for provable randomness.  
-🔹 Add event logging for better tracking.  
-🔹 Include a function to allow players to withdraw if the lottery is canceled.  
+### 🌐 **GitHub Repository**
+[🔗 Advanced Lottery Source Code](https://github.com/your-repository-link)
 
-#200DaysOfCode #Web3 #Solidity #SmartContracts #Ethereum #Blockchain #Lottery #RemixIDE
+---
+#AdvancedLottery #Blockchain #Solidity #Ethereum #SmartContracts #Web3 🚀
