@@ -1,6 +1,7 @@
 <div align="center">
   <br />
-      <img src="https://github.com/iamjohncaleb/200-Days-Of-Code-Challenge/issues/1#issue-2966102555" alt="Project Banner">
+      <img src="https://private-user-images.githubusercontent.com/147498099/429460931-b564906e-8a7e-49b6-91a2-225a57d0c123.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDM2MDQxNzYsIm5iZiI6MTc0MzYwMzg3NiwicGF0aCI6Ii8xNDc0OTgwOTkvNDI5NDYwOTMxLWI1NjQ5MDZlLThhN2UtNDliNi05MWEyLTIyNWE1N2QwYzEyMy5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNDAyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDQwMlQxNDI0MzZaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1hNjQ0MWMzN2EyY2UzZjc3YjM2ZjYxYjMwZTA4OTVmYzk3MDJkNWQ3ZDEzY2RkM2ViMzdmMzg3MTM1ZmVjYTBjJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.kKxEFmmwoXjz7WxQmxUB2yO1uAorX88OJzO1F35gCik" alt="Project Banner">
+  
     </a>
 
   <div>
