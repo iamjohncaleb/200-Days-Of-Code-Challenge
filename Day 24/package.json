@@ -1,0 +1,16 @@
+{
+    "name": "p2p-lending-smartcontract",
+    "version": "1.0.0",
+    "description": "A Peer-to-Peer Lending smart contract.",
+    "scripts": {
+        "compile": "npx hardhat compile",
+        "test": "npx hardhat test",
+        "deploy": "npx hardhat run scripts/deploy_p2p_lending.js --network goerli"
+    },
+    "dependencies": {
+        "@nomicfoundation/hardhat-toolbox": "^2.0.0",
+        "chai": "^4.3.4",
+        "ethers": "^5.7.0",
+        "hardhat": "^2.17.0"
+    }
+}

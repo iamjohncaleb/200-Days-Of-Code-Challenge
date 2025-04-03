@@ -1,0 +1,41 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "D:\\1 MARCH\\March End\\200 Days of Code\\Code Snippets\\Day 12\\contracts\\contract.sol": {
+      "lastModificationDate": 1742934560946,
+      "contentHash": "d2ebc1acbaa96dfa0e24629417304e17",
+      "sourceName": "contracts/contract.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "MultiSigWallet"
+      ]
+    }
+  }
+}

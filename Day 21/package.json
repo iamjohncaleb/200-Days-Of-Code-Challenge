@@ -1,0 +1,16 @@
+{
+    "name": "twitter-smartcontract",
+    "version": "1.0.0",
+    "description": "A simple Twitter-like smart contract.",
+    "scripts": {
+        "compile": "npx hardhat compile",
+        "test": "npx hardhat test",
+        "deploy": "npx hardhat run scripts/deploy_twitter_smartcontract.js --network goerli"
+    },
+    "dependencies": {
+        "@nomicfoundation/hardhat-toolbox": "^2.0.0",
+        "chai": "^4.3.4",
+        "ethers": "^5.7.0",
+        "hardhat": "^2.17.0"
+    }
+}
