@@ -52,10 +52,6 @@ npx hardhat run scripts/deploy.js --network sepolia
 npx hardhat test
 ```
 
-### 🔗 **Next Steps**
-- Implement **multi-signature approvals for withdrawals**  
-- Add **vesting functionality for gradual releases**  
-- Create **a frontend UI for user interaction**  
 
 ### 🌐 **GitHub Repository**
 [🔗 Time Lock Source Code](https://github.com/your-repository-link)
