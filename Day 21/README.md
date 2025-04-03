@@ -37,7 +37,4 @@ npx hardhat run scripts/deploy_twitter_smartcontract.js --network goerli
 ```sh
 npx hardhat test
 ```
-### 🔗 **Next Steps**
-- Implement **likes and retweets**
-- Add **follow/unfollow functionality**
-- Introduce **tweet deletion mechanism**
+#Day21 #200DaysOfCode #Solidity #SmartContracts #Ethereum #Blockchain #Web3 🚀
