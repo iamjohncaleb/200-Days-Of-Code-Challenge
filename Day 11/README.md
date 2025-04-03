@@ -1,8 +1,17 @@
-[![Hardhat](https://img.shields.io/badge/Built%20With-Hardhat-yellow)](https://hardhat.org/)  
-[![Solidity](https://img.shields.io/badge/Solidity-0.8.20-blue)](https://soliditylang.org/)  
-[![Ethereum](https://img.shields.io/badge/Ethereum-Smart%20Contracts-green)](https://ethereum.org/en/developers/docs/smart-contracts/)  
+<div align="center">
+  <br />
+      <img src="https://github.com/iamjohncaleb/200-Days-Of-Code-Challenge/blob/main/Thumbnails/Day%2011.jpg" alt="Project Banner">
 
-# 📅 **Day 11: ERC-20 Airdrop Smart Contract**
+  <div>
+    <img src="https://img.shields.io/badge/solidity-363636?style=for-the-badge&logo=solidity&logoColor=white" />
+    <img src="https://img.shields.io/badge/-Next_JS-black?style=for-the-badge&logoColor=white&logo=nextdotjs&color=000000" alt="nextdotjs" />
+    <img src="https://img.shields.io/badge/web3.js-F16822?style=for-the-badge&logo=web3dotjs&logoColor=white" />
+    <img src="https://img.shields.io/badge/hardhat-F3BA2F?style=for-the-badge&logo=ethereum&logoColor=black" />
+  </div>
+
+  <h3 align="center">Day 11 📅 ERC-20 Airdrop Smart Contract/h3>
+</div>
+
 
 ## 🔍 Overview
 Today's project is an **Airdrop smart contract** that allows the owner to distribute ERC-20 tokens to multiple recipients in a single transaction.
