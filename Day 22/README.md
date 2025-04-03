@@ -37,8 +37,6 @@ npx hardhat run scripts/deploy_escrow_smartcontract.js --network goerli
 #### **4️⃣ Run Tests**
 ```sh
 npx hardhat test
-```
-### 🔗 **Next Steps**
-- Implement **multi-party arbitration**
-- Add **time-based auto-release of funds**
-- Introduce **deposit withdrawal functionality**
+
+
+
