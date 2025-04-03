@@ -53,6 +53,6 @@ npx hardhat test
 ```
 
 ### 🌐 **GitHub Repository**
-[🔗 Advanced Calculator Source Code](https://github.com/your-repository-link)
+[🔗 Advanced Calculator Source Code](https://github.com/iamjohncaleb/200-Days-Of-Code-Challenge/edit/main/Day%201)
 
 #AdvancedCalculator #Blockchain #Solidity #Ethereum #SmartContracts #Web3 🚀
