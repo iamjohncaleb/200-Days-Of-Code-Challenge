@@ -52,11 +52,6 @@ npx hardhat run scripts/deploy.js --network sepolia
 npx hardhat test
 ```
 
-### 🔗 **Next Steps**
-- Implement **multiple winners** feature  
-- Add **chainlink VRF for provable randomness**  
-- Integrate **frontend UI for ticket purchases**  
-
 ### 🌐 **GitHub Repository**
 [🔗 Advanced Lottery Source Code](https://github.com/your-repository-link)
 
