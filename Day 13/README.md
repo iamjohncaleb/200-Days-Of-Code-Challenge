@@ -1,9 +1,16 @@
-# Crowdfunding Smart Contract
+<div align="center">
+  <br />
+      <img src="https://github.com/iamjohncaleb/200-Days-Of-Code-Challenge/blob/main/Thumbnails/Day%2013.jpg" alt="Project Banner">
 
-![Solidity](https://img.shields.io/badge/Solidity-%5E0.8.0-blue)
-![Hardhat](https://img.shields.io/badge/Hardhat-%5E2.0-yellow)
-![Ethereum](https://img.shields.io/badge/Ethereum-SmartContract-orange)
-![Node.js](https://img.shields.io/badge/Node.js-%5E16.0-green)
+  <div>
+    <img src="https://img.shields.io/badge/solidity-363636?style=for-the-badge&logo=solidity&logoColor=white" />
+    <img src="https://img.shields.io/badge/-Next_JS-black?style=for-the-badge&logoColor=white&logo=nextdotjs&color=000000" alt="nextdotjs" />
+    <img src="https://img.shields.io/badge/web3.js-F16822?style=for-the-badge&logo=web3dotjs&logoColor=white" />
+    <img src="https://img.shields.io/badge/hardhat-F3BA2F?style=for-the-badge&logo=ethereum&logoColor=black" />
+  </div>
+
+  <h3 align="center">Day 13 📅 Crowdfunding Smart Contract/h3>
+</div>
 
 ## Overview
 Today's Solidity project is a **Crowdfunding Smart Contract**, allowing users to contribute funds toward a goal within a set timeframe. If the goal is met, the owner can withdraw; otherwise, contributors can request refunds.
