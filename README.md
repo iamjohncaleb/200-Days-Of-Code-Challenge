@@ -1,4 +1,18 @@
-# 🚀 200 Days of Code Challenge
+<div align="center">
+  <br />
+      <img src="https://private-user-images.githubusercontent.com/147498099/429460931-b564906e-8a7e-49b6-91a2-225a57d0c123.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDM2MDQxNzYsIm5iZiI6MTc0MzYwMzg3NiwicGF0aCI6Ii8xNDc0OTgwOTkvNDI5NDYwOTMxLWI1NjQ5MDZlLThhN2UtNDliNi05MWEyLTIyNWE1N2QwYzEyMy5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNDAyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDQwMlQxNDI0MzZaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1hNjQ0MWMzN2EyY2UzZjc3YjM2ZjYxYjMwZTA4OTVmYzk3MDJkNWQ3ZDEzY2RkM2ViMzdmMzg3MTM1ZmVjYTBjJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.kKxEFmmwoXjz7WxQmxUB2yO1uAorX88OJzO1F35gCik" alt="Project Banner">
+
+  <div>
+    <img src="https://img.shields.io/badge/solidity-363636?style=for-the-badge&logo=solidity&logoColor=white" />
+    <img src="https://img.shields.io/badge/-Next_JS-black?style=for-the-badge&logoColor=white&logo=nextdotjs&color=000000" alt="nextdotjs" />
+    <img src="https://img.shields.io/badge/web3.js-F16822?style=for-the-badge&logo=web3dotjs&logoColor=white" />
+    <img src="https://img.shields.io/badge/hardhat-F3BA2F?style=for-the-badge&logo=ethereum&logoColor=black" />
+    <img src="https://img.shields.io/badge/solana-9945FF?style=for-the-badge&logo=solana&logoColor=white" />
+  </div>
+
+  <h3 align="center">🚀 200 Days of Code Challenge</h3>
+</div>
+
 
 ## 🏆 About the Challenge
 Starting **March 15, 2025**, I am embarking on a **200 Days of Code** journey to enhance my **Web3 Fullstack Development** skills and showcase my progress. Over the next 200 days, I'll be building fullstack applications, smart contracts, and exploring cutting-edge Web3 technologies.
@@ -55,8 +69,8 @@ Each folder will contain the project for that day, including **source code, smar
 
 ## 🚀 How to Follow My Journey
 🔹 **GitHub**: All code will be available here in this repository.  
-🔹 **LinkedIn & Twitter**: Regular updates on my progress, key learnings, and project highlights.  
-🔹 **YouTube (Melodies from Eden)**: Occasional video breakdowns of key projects.  
+🔹 **LinkedIn & Twitter**(Iamjohncalebb): Regular updates on my progress, key learnings, and project highlights.  
+🔹 **YouTube (Iamjohncaleb)**: Occasional video breakdowns of key projects.  
 
 ## 📢 Let's Connect & Build Together!
 I’d love to connect with fellow developers, Web3 enthusiasts, and anyone interested in blockchain development. Feel free to share feedback, suggestions, or just say hi! 🎉  
