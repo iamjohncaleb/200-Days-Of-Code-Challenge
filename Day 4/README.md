@@ -51,11 +51,6 @@ npx hardhat run scripts/deploy.js --network sepolia
 npx hardhat test
 ```
 
-### 🔗 **Next Steps**
-- Implement **oracle integration** for real-time weather data  
-- Add **historical temperature storage** for analytics  
-- Integrate **frontend UI for user-friendly access**  
-
 ### 🌐 **GitHub Repository**
 [🔗 Weather Checker Source Code](https://github.com/your-repository-link)
 
