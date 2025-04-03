@@ -1,6 +1,6 @@
 <div align="center">
   <br />
-      <img src="https://github.com/iamjohncaleb/200-Days-Of-Code-Challenge/blob/main/Thumbnails/the%20Day%2024.jpg" alt="Project Banner">
+      <img src="https://github.com/iamjohncaleb/200-Days-Of-Code-Challenge/blob/main/Thumbnails/the%20Day%2025.jpg" alt="Project Banner">
 
   <div>
     <img src="https://img.shields.io/badge/solidity-363636?style=for-the-badge&logo=solidity&logoColor=white" />
@@ -9,7 +9,7 @@
     <img src="https://img.shields.io/badge/hardhat-F3BA2F?style=for-the-badge&logo=ethereum&logoColor=black" />
   </div>
 
-  <h3 align="center">Day 24 📅 NFT Marketplace Smart Contract </h3>
+  <h3 align="center">Day 25 📅 NFT Marketplace Smart Contract </h3>
 </div>
 
 
