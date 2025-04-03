@@ -29,9 +29,40 @@ Today’s contract is an **Enhanced NFT Smart Contract**, adding functionality b
 4️⃣ Minted NFTs have **unique URIs** linked to metadata  
 5️⃣ The contract **receives ETH** and allows the owner to withdraw funds  
 
-🔗 **Next Steps**  
-- Implement **dynamic whitelist slots (e.g., time-limited access)**  
-- Add **royalties for secondary sales** using ERC-2981  
-- Integrate **randomized traits** for uniqueness  
+### 🚀 **Setup and Running the Project**  
+#### **1️⃣ Install Dependencies**  
+Ensure you have **Node.js** and **npm** installed. Then, run:  
+```sh  
+npm install  
+```
+
+#### **2️⃣ Compile the Smart Contract**  
+```sh  
+npx hardhat compile  
+```
+
+#### **3️⃣ Deploy the Contract**  
+To deploy on a local Hardhat network:
+```sh
+npx hardhat node  
+npx hardhat run scripts/deploy_token_vesting.js --network localhost  
+```
+To deploy on Goerli or another testnet, add the network configuration in **hardhat.config.js** and use:  
+```sh
+npx hardhat run scripts/deploy_token_vesting.js --network goerli  
+```
+
+#### **4️⃣ Run Tests**  
+```sh  
+npx hardhat test  
+```
+This will simulate vesting scenarios and validate correct behavior.  
+
+
+
+### 🌐 **GitHub Repository**  
+[🔗 Token Vesting Source Code](https://github.com/iamjohncaleb/200-Days-Of-Code-Challenge/tree/main/Day%2018)  
+
+---  
 
 #Day18 #200DaysOfCode #Solidity #NFTs #Blockchain #Crypto 🚀
