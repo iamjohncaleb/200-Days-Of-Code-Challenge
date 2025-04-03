@@ -1,10 +1,16 @@
-# Flash Loan
+<div align="center">
+  <br />
+      <img src="https://github.com/iamjohncaleb/200-Days-Of-Code-Challenge/blob/main/Thumbnails/the%20Day%2029.jpg" alt="Project Banner">
 
-![Solidity](https://img.shields.io/badge/Solidity-^0.8.20-blue)
-![Hardhat](https://img.shields.io/badge/Hardhat-%E2%9C%94-yellow)
-![Ethereum](https://img.shields.io/badge/Ethereum-Smart%20Contracts-green)
+  <div>
+    <img src="https://img.shields.io/badge/solidity-363636?style=for-the-badge&logo=solidity&logoColor=white" />
+    <img src="https://img.shields.io/badge/-Next_JS-black?style=for-the-badge&logoColor=white&logo=nextdotjs&color=000000" alt="nextdotjs" />
+    <img src="https://img.shields.io/badge/web3.js-F16822?style=for-the-badge&logo=web3dotjs&logoColor=white" />
+    <img src="https://img.shields.io/badge/hardhat-F3BA2F?style=for-the-badge&logo=ethereum&logoColor=black" />
+  </div>
 
-## 📅 **Flash Loan Smart Contract**
+  <h3 align="center">Day 29 📅 Flash Loan Smart Contract </h3>
+</div>
 
 ### 🔍 **Overview**
 Today, I built a **Flash Loan** smart contract that allows users to borrow funds without collateral, provided they repay the loan within the same transaction.
