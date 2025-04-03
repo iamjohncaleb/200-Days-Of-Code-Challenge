@@ -52,13 +52,7 @@ npx hardhat run scripts/deploy.js --network sepolia
 npx hardhat test
 ```
 
-### 🔗 **Next Steps**
-- Implement **exponential and modulus operations**
-- Add **support for floating-point arithmetic using fixed-point math**
-- Develop **a frontend integration for interactive use**
-
 ### 🌐 **GitHub Repository**
 [🔗 Advanced Calculator Source Code](https://github.com/your-repository-link)
 
----
 #AdvancedCalculator #Blockchain #Solidity #Ethereum #SmartContracts #Web3 🚀
