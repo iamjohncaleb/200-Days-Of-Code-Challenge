@@ -28,5 +28,21 @@ Today, I built a **Counter smart contract** that allows users to increment, decr
 2️⃣ Users can increase/decrease the count  
 3️⃣ The owner can reset the counter when needed  
 
-
-#Day41 #200DaysOfCode #Solidity #SmartContracts #Ethereum #Blockchain #Web3 🚀
+### 🚀 **Setup and Running the Project**
+#### **1️⃣ Install Dependencies**
+```sh
+npm install
+```
+#### **2️⃣ Compile the Smart Contract**
+```sh
+npx hardhat compile
+```
+#### **3️⃣ Deploy the Contract**
+```sh
+npx hardhat run scripts/deploy_twitter_smartcontract.js --network goerli
+```
+#### **4️⃣ Run Tests**
+```sh
+npx hardhat test
+```
+#Day7 #200DaysOfCode #Solidity #SmartContracts #Ethereum #Blockchain #Web3 🚀
