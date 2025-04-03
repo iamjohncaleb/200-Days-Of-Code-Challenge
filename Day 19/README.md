@@ -54,10 +54,7 @@ npx hardhat test
 ```
 This will simulate vesting scenarios and validate correct behavior.  
 
-### 🔗 **Next Steps**  
-- Implement **cliff vesting** for time-based release schedules  
-- Add **multiple beneficiary support**  
-- Enable **vesting schedule updates** if needed  
+
 
 ### 🌐 **GitHub Repository**  
 [🔗 Token Vesting Source Code](https://github.com/iamjohncaleb/200-Days-Of-Code-Challenge/tree/main/Day%2019)  
