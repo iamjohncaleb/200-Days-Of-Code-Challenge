@@ -52,13 +52,9 @@ npx hardhat run scripts/deploy.js --network sepolia
 npx hardhat test
 ```
 
-### 🔗 **Next Steps**
-- Implement **vesting schedules** with multiple release stages
-- Add **cliff periods** to delay initial releases
-- Introduce **revoke functionality** for administrators
 
 ### 🌐 **GitHub Repository**
-[🔗 Token Vesting Source Code](https://github.com/your-repository-link)
+[🔗 Token Vesting Source Code](https://github.com/iamjohncaleb/200-Days-Of-Code-Challenge/edit/main/Day%2017)
 
 ---
 #TokenVesting #Blockchain #Solidity #Ethereum #SmartContracts #Web3 🚀
