@@ -28,8 +28,5 @@ Today, I built a **Counter smart contract** that allows users to increment, decr
 2️⃣ Users can increase/decrease the count  
 3️⃣ The owner can reset the counter when needed  
 
-🔗 **Next Steps**  
-- Add pause functionality  
-- Implement event logging for analytics  
 
-#Day41 #100DaysOfCode #Solidity #SmartContracts #Ethereum #Blockchain #Web3 🚀
+#Day41 #200DaysOfCode #Solidity #SmartContracts #Ethereum #Blockchain #Web3 🚀
