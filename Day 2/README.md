@@ -53,13 +53,9 @@ npx hardhat run scripts/deploy.js --network sepolia
 npx hardhat test
 ```
 
-### 🔗 **Next Steps**
-- Implement **funds locking mechanism**
-- Add **multi-signature unlock support**
-- Integrate **frontend UI for tracking lock status**
 
 ### 🌐 **GitHub Repository**
-[🔗 Advanced TimeLock Source Code](https://github.com/your-repository-link)
+[🔗 Advanced TimeLock Source Code](https://github.com/iamjohncaleb/200-Days-Of-Code-Challenge/edit/main/Day%202)
 
 ---
 #AdvancedTimeLock #Blockchain #Solidity #Ethereum #SmartContracts #Web3 🚀
