@@ -119,10 +119,5 @@ describe("Crowdfunding", function () {
 });
 ```
 
-## Next Steps
-- Implement **progress tracking UI** for better visibility  
-- Add **penalty/reward mechanisms** for early or late contributions  
-- Explore **integration with ERC20 tokens** instead of ETH  
-
 #Day13 #200DaysOfCode #Solidity #Crowdfunding #SmartContracts #Ethereum #Web3 🚀
 
