@@ -14,7 +14,7 @@
 
 
  🔍 **Overview**
-For **Day 36** of my **100 Smart Contracts in 100 Days Challenge**, I built an **Anti-Whale Token (AWT)** in Solidity. This ERC-20-like token prevents large transactions by enforcing a **maximum transaction limit**.
+For **Day 36** of my **200 Smart Contracts in 100 Days Challenge**, I built an **Anti-Whale Token (AWT)** in Solidity. This ERC-20-like token prevents large transactions by enforcing a **maximum transaction limit**.
 
  📜 **Key Features**
 ✅ **Anti-Whale Mechanism** – Limits transactions to **1% of the total supply** per transfer.  
