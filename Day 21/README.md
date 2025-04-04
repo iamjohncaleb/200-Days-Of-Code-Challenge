@@ -12,29 +12,47 @@
   <h3 align="center">Day 21 📅 Twitter Smart Contract </h3>
 </div>
 
-### 🔍 **Overview**
-A simple decentralized Twitter-like smart contract allowing users to post tweets.
+### 🔍 **Overview**  
+Today, I built a **Twitter-like decentralized application** smart contract that allows users to post tweets on-chain. It brings transparency and immutability to social interactions.
 
-### 📜 **Key Features**
-✅ **Post Tweets** – Users can post messages on-chain  
-✅ **Immutable History** – Tweets are permanently stored on the blockchain  
-✅ **Retrieve Tweets** – Anyone can fetch the full list of tweets  
+### 📜 **Key Features**  
+✅ **Post Tweets** – Users can write and store messages on-chain  
+✅ **Immutable History** – Once posted, tweets cannot be deleted or altered  
+✅ **Retrieve Tweets** – Anyone can access all stored tweets at any time  
+
+### 🛠️ **How It Works**  
+1️⃣ **Users send a transaction** to post their message  
+2️⃣ **Messages are stored immutably** in the blockchain  
+3️⃣ **Anyone can read** the full list of tweets via a public function  
 
 ### 🚀 **Setup and Running the Project**
-#### **1️⃣ Install Dependencies**
+
+#### **1️⃣ Install Dependencies**  
 ```sh
 npm install
 ```
-#### **2️⃣ Compile the Smart Contract**
+
+#### **2️⃣ Compile the Smart Contract**  
 ```sh
 npx hardhat compile
 ```
-#### **3️⃣ Deploy the Contract**
+
+#### **3️⃣ Deploy the Contract**  
+To deploy on Goerli testnet:
 ```sh
 npx hardhat run scripts/deploy_twitter_smartcontract.js --network goerli
 ```
-#### **4️⃣ Run Tests**
+
+#### **4️⃣ Run Tests**  
 ```sh
 npx hardhat test
 ```
+
+### 🔗 **Next Steps**  
+- Add **like and retweet** functionality  
+- Introduce **hashtags** and **filters**  
+- Build a **React frontend** for seamless interaction  
+
+---
+
 #Day21 #200DaysOfCode #Solidity #SmartContracts #Ethereum #Blockchain #Web3 🚀
