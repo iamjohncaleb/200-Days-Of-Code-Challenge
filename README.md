@@ -1,6 +1,6 @@
 <div align="center">
   <br />
-      <img src="https://github.com/iamjohncaleb/200-Days-Of-Code-Challenge/blob/main/challenge%20Thumbnail.png" alt="Project Banner">
+      <img src="https://github.com/iamjohncaleb/200-Days-Of-Code-Challenge/blob/main/Thumbnails/thumbnailsss.jpg" alt="Project Banner">
 
   <div>
     <img src="https://img.shields.io/badge/solidity-363636?style=for-the-badge&logo=solidity&logoColor=white" />
