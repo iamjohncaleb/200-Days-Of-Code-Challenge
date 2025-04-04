@@ -13,7 +13,7 @@
 </div>
 
  🔍 **Overview**
-For **Day 35** of my **100 Smart Contracts in 100 Days Challenge**, I built an **Airdrop Smart Contract** in Solidity. This contract allows the distribution of ERC-20 tokens to multiple recipients in a single transaction.
+For **Day 35** of my **100 Smart Contracts in 200 Days Challenge**, I built an **Airdrop Smart Contract** in Solidity. This contract allows the distribution of ERC-20 tokens to multiple recipients in a single transaction.
 
  📜 **Key Features**
 ✅ **Bulk Token Distribution** – Send tokens to multiple addresses in one call.  
