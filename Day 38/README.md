@@ -1,7 +1,20 @@
-📅 **Day 38: Subscription Service Smart Contract**
+<div align="center">
+  <br />
+      <img src="https://github.com/iamjohncaleb/200-Days-Of-Code-Challenge/blob/main/Thumbnails/the%20Day%2038.jpg" alt="Project Banner">
+
+  <div>
+    <img src="https://img.shields.io/badge/solidity-363636?style=for-the-badge&logo=solidity&logoColor=white" />
+    <img src="https://img.shields.io/badge/-Next_JS-black?style=for-the-badge&logoColor=white&logo=nextdotjs&color=000000" alt="nextdotjs" />
+    <img src="https://img.shields.io/badge/web3.js-F16822?style=for-the-badge&logo=web3dotjs&logoColor=white" />
+    <img src="https://img.shields.io/badge/hardhat-F3BA2F?style=for-the-badge&logo=ethereum&logoColor=black" />
+  </div>
+
+  <h3 align="center">Day 38 ⭐ Subscription Service Smart Contract </h3>
+</div>
+
 
  🔍 **Overview**
-For **Day 38** of my **100 Smart Contracts in 100 Days Challenge**, I built a **Subscription Service Smart Contract** in Solidity. This contract enables users to **subscribe to a service by paying a fixed fee**.
+For **Day 38** of my **200 Smart Contracts in 100 Days Challenge**, I built a **Subscription Service Smart Contract** in Solidity. This contract enables users to **subscribe to a service by paying a fixed fee**.
 
  📜 **Key Features**
 ✅ **Fixed Subscription Fee** – Users pay **0.05 ETH** per subscription cycle.  
