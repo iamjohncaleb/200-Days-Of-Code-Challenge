@@ -48,11 +48,4 @@ npx hardhat run scripts/deploy_twitter_smartcontract.js --network goerli
 npx hardhat test
 ```
 
-### 🔗 **Next Steps**  
-- Add **like and retweet** functionality  
-- Introduce **hashtags** and **filters**  
-- Build a **React frontend** for seamless interaction  
-
----
-
 #Day21 #200DaysOfCode #Solidity #SmartContracts #Ethereum #Blockchain #Web3 🚀
