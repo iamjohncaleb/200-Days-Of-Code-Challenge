@@ -12,31 +12,43 @@
   <h3 align="center">Day 22 📅 Unique Escrow Smart Contract </h3>
 </div>
 
+### 🔍 **Overview**  
+Today, I built a **Unique Escrow Smart Contract** to securely manage transactions between a buyer and a seller with the help of an arbiter. It guarantees fair outcomes for both parties.
 
-### 🔍 **Overview**
-A decentralized escrow smart contract that ensures fair transactions between buyers and sellers.
+### 📜 **Key Features**  
+✅ **Buyer Funds Escrow** – Funds are locked in the contract until conditions are fulfilled  
+✅ **Arbiter Resolves Disputes** – A neutral party can release or refund based on agreement  
+✅ **Funds Released or Refunded** – Ensures secure and balanced fund handling  
 
-### 📜 **Key Features**
-✅ **Buyer funds escrow** – Ensures seller gets paid only after conditions are met  
-✅ **Arbiter resolves disputes** – Provides an extra layer of security  
-✅ **Funds can be refunded or released** – Ensures fair handling of transactions  
+### 🛠️ **How It Works**  
+1️⃣ **Buyer deposits** ETH into the contract  
+2️⃣ **Arbiter reviews** the transaction outcome  
+3️⃣ **Funds are either released** to the seller or refunded to the buyer  
 
 ### 🚀 **Setup and Running the Project**
-#### **1️⃣ Install Dependencies**
+
+#### **1️⃣ Install Dependencies**  
 ```sh
 npm install
 ```
-#### **2️⃣ Compile the Smart Contract**
+
+#### **2️⃣ Compile the Smart Contract**  
 ```sh
 npx hardhat compile
 ```
-#### **3️⃣ Deploy the Contract**
+
+#### **3️⃣ Deploy the Contract**  
+To deploy on Goerli testnet:
 ```sh
 npx hardhat run scripts/deploy_escrow_smartcontract.js --network goerli
 ```
-#### **4️⃣ Run Tests**
+
+#### **4️⃣ Run Tests**  
 ```sh
 npx hardhat test
+```
 
+---
+#Day22 #200DaysOfCode #Solidity #SmartContracts #Escrow #Ethereum #Web3 #Blockchain 🚀
 
 
