@@ -62,6 +62,3 @@ npx hardhat test
 ---
 
 #ReputationSystem #Solidity #Blockchain #SmartContracts #Web3 #200DaysOfCode 🚀
-```
-
-Would you like me to help you prep banners for the other days too or maybe generate a thumbnail template concept you could use across all of them for visual consistency? 🎨✨
