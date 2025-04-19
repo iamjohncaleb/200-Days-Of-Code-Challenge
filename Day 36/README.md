@@ -9,20 +9,22 @@
     <img src="https://img.shields.io/badge/hardhat-F3BA2F?style=for-the-badge&logo=ethereum&logoColor=black" />
   </div>
 
-  <h3 align="center">🐋 Day 36: AntiWhaleToken </h3>
+  <h3 align="center">🎁 Day 36: Decentralized Identity Smart Contract</h3>
 </div>
 
-### 🔍 **Overview**
+## 🔍 **Overview**
 
-A simple ERC-20 style token contract that enforces a 1% transaction limit on transfers to discourage whale activity.
+The **Decentralized Identity** smart contract allows users to create and manage their digital identity in a secure, trustless, and decentralized manner. This contract provides a self-sovereign identity, empowering users with full control over their data.
 
-📜 Features
+### 📜 **Key Features**
+✅ **Self-Sovereign Identity** – Users maintain full control over their identity  
+✅ **Decentralized Storage** – Identity data is securely stored on the blockchain  
+✅ **Permissionless Access** – Anyone can verify identities, but only the user can update them  
 
-✅ 1% transaction limit per transfer
-
-✅ Total supply minted to deployer
-
-✅ Simple and gas-efficient implementation
+### 🛠️ **How It Works**
+1️⃣ **Register**: Users create their identity by providing essential details like name, email, and other metadata.  
+2️⃣ **Store**: The identity is securely stored on-chain, tied to the user’s address.  
+3️⃣ **Update**: Users can update their identity whenever needed.
 
 ### 🚀 **Setup and Running the Project**
 
@@ -30,17 +32,38 @@ A simple ERC-20 style token contract that enforces a 1% transaction limit on tra
 ```sh
 npm install
 ```
+
 #### **2️⃣ Compile the Smart Contract**
 ```sh
 npx hardhat compile
 ```
+
 #### **3️⃣ Deploy the Contract**
+To deploy on a local Hardhat network:
 ```sh
-npx hardhat run scripts/deploy_warfund_crowdfunding.js --network goerli
+npx hardhat node  
+npx hardhat run scripts/deploy.js --network localhost
 ```
+To deploy on Sepolia or another testnet, add the network configuration in **hardhat.config.js** and use:
+```sh
+npx hardhat run scripts/deploy.js --network sepolia
+```
+
 #### **4️⃣ Run Tests**
 ```sh
 npx hardhat test
 ```
 
-#Day 36 #200DaysOfCode #Solidity #SmartContracts #Blockchian #DAO #Web3 🚀
+### 🔗 **Next Steps**
+- Implement **verifiable credentials** for trusted authentication  
+- Add **support for on-chain attestations**  
+- Introduce **decentralized identity revocation mechanism**
+
+### 🌐 **GitHub Repository**
+[🔗 Decentralized Identity Source Code](https://github.com/your-repository-link)
+
+---
+#DecentralizedIdentity #Solidity #Blockchain #Ethereum #SmartContracts #Web3 🚀
+```
+
+This version keeps the structure but is aligned with your new Decentralized Identity smart contract project. It also uses the appropriate headers and badges for a more polished and visually appealing README.
