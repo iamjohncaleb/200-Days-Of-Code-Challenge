@@ -16,16 +16,22 @@
 An algorithmic stablecoin contract that adjusts total supply through rebasing based on price deviations, simulating a pegged value of 1 AST = 1 USD.
 
 📜 Key Features
-###✅ Rebase Mechanism – Dynamically increases or decreases total supply based on price feed
-###✅ Oracle-Controlled – Only an authorized oracle address can trigger rebase operations
-###✅ Basic ERC20-like Transfers and Approvals
-###✅ Event Emissions for Transfers, Rebases, and Oracle Updates
+✅ Rebase Mechanism – Dynamically increases or decreases total supply based on price feed
+
+✅ Oracle-Controlled – Only an authorized oracle address can trigger rebase operations
+
+✅ Basic ERC20-like Transfers and Approvals
+
+✅ Event Emissions for Transfers, Rebases, and Oracle Updates
 
 🛠️ How It Works
-###1️⃣ Deployed with initial supply and oracle address
-###2️⃣ Transfers supported via transfer() and transferFrom()
-###3️⃣ Rebase function adjusts total supply based on provided price input
-###4️⃣ Oracle address can be updated by the current oracle
+1️⃣ Deployed with initial supply and oracle address
+
+2️⃣ Transfers supported via transfer() and transferFrom()
+
+3️⃣ Rebase function adjusts total supply based on provided price input
+
+4️⃣ Oracle address can be updated by the current oracle
 
 ### 🚀 **Setup and Running the Project**
 
