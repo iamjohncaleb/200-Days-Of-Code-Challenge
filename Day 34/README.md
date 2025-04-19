@@ -16,6 +16,7 @@
 A Time-Locked Vault smart contract that securely holds ETH deposits for a specified lock duration. Users can deposit ETH, and withdraw it only after their personal unlock time has passed.
 
 📜 Key Features
+
 ✅ Time-Locked Deposits – Funds are locked for a specified duration per deposit
 
 ✅ User-Specific Unlock Time – Each user manages their own vault duration
