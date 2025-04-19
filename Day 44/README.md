@@ -1,50 +1,73 @@
-# 📅 Day 44: Military Equipment Maintenance Logs Smart Contract
+<div align="center">
+  <br />
+  <img src="https://github.com/iamjohncaleb/200-Days-Of-Code-Challenge/blob/main/Thumbnails/the%20Day%2044.jpg" alt="Project Banner">
 
-![Solidity](https://img.shields.io/badge/Solidity-0.8.20-blue.svg)
-![Hardhat](https://img.shields.io/badge/Hardhat-3.0.0-yellow.svg)
-![Ethers.js](https://img.shields.io/badge/Ethers.js-6.0.0-green.svg)
+  <div>
+    <img src="https://img.shields.io/badge/Solidity-0.8.20-blue.svg" />
+    <img src="https://img.shields.io/badge/Hardhat-3.0.0-yellow.svg" />
+    <img src="https://img.shields.io/badge/Ethers.js-6.0.0-green.svg" />
+  </div>
 
-## 🔍 Overview
-Today's build is a **Military Equipment Maintenance Logs Smart Contract** — a decentralized logbook for recording and auditing maintenance performed on sensitive military equipment.
+  <h3 align="center">📅 Day 44: Military Equipment Maintenance Logs Smart Contract</h3>
+</div>
 
-## 📜 Key Features
-✅ Record maintenance logs per equipment ID  
-✅ Includes technician address, description, and timestamp  
-✅ Public retrieval of maintenance logs by equipment ID  
-✅ Tracks total record count per equipment  
+## 🔍 **Overview**
 
-## 🛠️ How It Works
-1️⃣ Technicians call `logMaintenance()` with equipment ID and description  
-2️⃣ Logs are stored with timestamp and caller address  
-3️⃣ Anyone can view maintenance logs for a specific equipment via `getMaintenanceRecords()`  
-4️⃣ Total log counts available via `getRecordCount()`  
+A **Military Equipment Maintenance Logs Smart Contract** — a decentralized logbook for securely recording and auditing maintenance activities on critical military equipment, ensuring transparency and traceability.
 
-## 🚀 Setup and Running the Project
+---
 
-### 1️⃣ Install Dependencies
+## 📜 **Key Features**
+✅ **Record maintenance logs per equipment ID**  
+✅ **Track technician address, description, and timestamp**  
+✅ **Public retrieval of maintenance logs by equipment ID**  
+✅ **Total record count tracking per equipment**
 
+---
+
+## 🛠️ **How It Works**
+
+1️⃣ Technicians call `logMaintenance()` with an equipment ID and maintenance description  
+2️⃣ Each log is stored on-chain with a timestamp and caller's address  
+3️⃣ Anyone can retrieve maintenance logs using `getMaintenanceRecords()` by equipment ID  
+4️⃣ `getRecordCount()` returns the total number of logs for each equipment  
+
+---
+
+## 🚀 **Setup and Running the Project**
+
+#### **1️⃣ Install Dependencies**
 ```bash
 npm install
-2️⃣ Compile the Smart Contract
-bash
-Copy
-Edit
+```
+
+#### **2️⃣ Compile Smart Contracts**
+```bash
 npx hardhat compile
-3️⃣ Deploy the Contract (locally)
-bash
-Copy
-Edit
+```
+
+#### **3️⃣ Deploy to Localhost**
+```bash
 npx hardhat run scripts/deploy_equipment_maintenance.js --network hardhat
-4️⃣ Run Tests
-bash
-Copy
-Edit
+```
+
+#### **4️⃣ Run Unit Tests**
+```bash
 npx hardhat test
-🔗 Next Steps
-Integrate role-based access control for approved military technicians
+```
 
-Add equipment status (active, under repair, decommissioned)
+---
 
-Build a React/Next.js dashboard to browse and search logs
+## 📌 **Next Steps**
+- 🔐 Add **role-based access control** for authorized military technicians  
+- ⚙️ Implement **equipment status tracking** (active, under repair, decommissioned)  
+- 🌐 Build a **React/Next.js dashboard** for browsing and searching maintenance logs  
 
-#Day44 #200DaysOfCode #Solidity #SmartContracts #NationalSecurity #MilitaryLogistics #Web3 🚀
+---
+
+## 🌐 **GitHub Repository**
+[🔗 Military Equipment Maintenance Logs Source Code](https://github.com/your-repository-link)
+
+---
+
+#MilitaryLogistics #Solidity #SmartContracts #BlockchainSecurity #Web3 #200DaysOfCode 🚀
