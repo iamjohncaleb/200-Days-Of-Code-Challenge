@@ -54,11 +54,6 @@ npx hardhat run scripts/deploy.js --network sepolia
 npx hardhat test
 ```
 
-### 🔗 **Next Steps**
-- Implement **verifiable credentials** for trusted authentication  
-- Add **support for on-chain attestations**  
-- Introduce **decentralized identity revocation mechanism**
-
 ### 🌐 **GitHub Repository**
 [🔗 Decentralized Identity Source Code](https://github.com/your-repository-link)
 
