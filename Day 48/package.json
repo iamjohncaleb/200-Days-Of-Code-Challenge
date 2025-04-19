@@ -1,0 +1,17 @@
+{
+    "name": "intelligence-data-hash-registry",
+    "version": "1.0.0",
+    "description": "A smart contract for securing and verifying data integrity using hashes",
+    "scripts": {
+      "test": "npx hardhat test",
+      "compile": "npx hardhat compile",
+      "deploy": "npx hardhat run scripts/deploy.js --network localhost"
+    },
+    "devDependencies": {
+      "chai": "^4.3.7",
+      "ethereum-waffle": "^3.4.4",
+      "ethers": "^6.6.0",
+      "hardhat": "^2.22.0"
+    }
+  }
+  

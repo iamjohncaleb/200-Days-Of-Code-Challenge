@@ -1,0 +1,14 @@
+{
+    "name": "equipment-maintenance",
+    "version": "1.0.0",
+    "description": "Military Equipment Maintenance Logs Smart Contract",
+    "scripts": {
+      "test": "npx hardhat test"
+    },
+    "devDependencies": {
+      "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+      "ethers": "^6.0.0",
+      "hardhat": "^3.0.0"
+    }
+  }
+  
