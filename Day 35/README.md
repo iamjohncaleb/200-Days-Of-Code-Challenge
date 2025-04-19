@@ -1,6 +1,3 @@
-Absolutely — let’s polish this up to match the clean, styled format of your other READMEs while keeping your Day 35 identity intact. Here’s the refined version:
-
-```markdown
 <div align="center">
   <br />
   <img src="https://github.com/iamjohncaleb/200-Days-Of-Code-Challenge/blob/main/Thumbnails/the%20Day%2035.jpg" alt="Project Banner">
