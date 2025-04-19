@@ -29,9 +29,9 @@ A Governance Token Smart Contract that allows token holders to participate in de
 4️⃣ Token holders vote on proposals, weighted by their token holdings
 5️⃣ Winning proposal can be retrieved on-chain
 
-🚀 Setup and Running the Project
 
 ### 🚀 **Setup and Running the Project**
+
 #### **1️⃣ Install Dependencies**
 ```sh
 npm install
