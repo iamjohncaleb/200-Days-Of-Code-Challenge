@@ -1,21 +1,37 @@
-📅 **Day 38: Subscription Service Smart Contract**
+📊 Day 38: SubscriptionService
+🔍 Overview
+A simple smart contract for handling subscription services, where users can subscribe to a service for a fixed fee and duration.
 
- 🔍 **Overview**
-For **Day 38** of my **100 Smart Contracts in 100 Days Challenge**, I built a **Subscription Service Smart Contract** in Solidity. This contract enables users to **subscribe to a service by paying a fixed fee**.
+📜 Features
+✅ Fixed subscription fee and duration
+✅ Subscription expiry after 30 days
+✅ Event logging for each subscription
+✅ Subscription status check
 
- 📜 **Key Features**
-✅ **Fixed Subscription Fee** – Users pay **0.05 ETH** per subscription cycle.  
-✅ **Time-based Access** – Subscriptions last for **30 days**.  
-✅ **Auto-extension** – Renewing extends the current subscription period.  
-✅ **Status Check** – Users can verify if they have an **active subscription**.
+🛠️ Project Setup
+1️⃣ Install dependencies
+bash
+Copy
+Edit
+npm install
+2️⃣ Compile contracts
+bash
+Copy
+Edit
+npx hardhat compile
+3️⃣ Deploy to localhost
+bash
+Copy
+Edit
+npx hardhat run scripts/deploy_subscription.js --network localhost
+4️⃣ Run unit tests
+bash
+Copy
+Edit
+npx hardhat test
+📌 Possible Enhancements
+Add subscription tier levels (e.g., monthly, yearly)
 
-🛠️ **How It Works**
- **subscribe()** – Users pay **0.05 ETH** to activate or extend their subscription.  
- **checkSubscription(user)** – Returns `true` if a user’s subscription is still active.  
+Include automated renewals
 
- 🔗 **Next Steps**
-🔹 Implement **tiered subscription plans** with different benefits.  
-🔹 Allow **ERC20 token payments** for greater flexibility.  
-🔹 Integrate **NFT-based memberships** for exclusive access.  
-
-#100DaysOfCode #Solidity #SmartContracts #Ethereum #SubscriptionService #Blockchain 🚀
+Integrate with ERC20 tokens for payment

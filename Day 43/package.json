@@ -1,0 +1,14 @@
+{
+    "name": "crisis-alert",
+    "version": "1.0.0",
+    "description": "Decentralized Crisis Alert & Response Smart Contract",
+    "scripts": {
+      "test": "npx hardhat test"
+    },
+    "devDependencies": {
+      "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+      "ethers": "^6.0.0",
+      "hardhat": "^3.0.0"
+    }
+  }
+  

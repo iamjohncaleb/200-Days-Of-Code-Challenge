@@ -1,36 +1,54 @@
- 🏛️ Day 31: Governance Token Smart Contract  
+📅 Day 31: GovernanceToken Smart Contract
+🔍 Overview
+A Governance Token Smart Contract that allows token holders to participate in decentralized decision-making by creating proposals and voting with their token balance as voting power.
 
- 🔍 Overview  
-For **Day 31** of my **100 Smart Contracts in 100 Days Challenge**, I built a **Governance Token Smart Contract** in Solidity. This contract allows token holders to create proposals and vote using their token balance as voting power.  
+📜 Key Features
+✅ ERC20-like Token Mechanics – Simple transfer functionality
+✅ Proposal Creation – Anyone can initiate proposals
+✅ Voting System – Token-weighted voting system
+✅ Winning Proposal Detection – Query the highest voted proposal
 
- 📜 Key Features  
+🛠️ How It Works
+1️⃣ Deploys with total supply allocated to contract creator
+2️⃣ Tokens can be transferred between addresses
+3️⃣ Anyone can create proposals describing a governance action
+4️⃣ Token holders vote on proposals, weighted by their token holdings
+5️⃣ Winning proposal can be retrieved on-chain
 
-✅ **Token Functionality**  
- Implements a basic **ERC20-like token** with `transfer()`.  
- Token holders can use their balance to participate in governance.  
+🚀 Setup and Running the Project
+1️⃣ Install Dependencies
+bash
+Copy
+Edit
+npm install
+2️⃣ Compile the Smart Contract
+bash
+Copy
+Edit
+npx hardhat compile
+3️⃣ Deploy the Contract
+To a local Hardhat node:
 
-✅ **Decentralized Voting System**  
- Users can **create proposals** on-chain.  
- Voting is weighted based on the number of tokens held.  
- Each user can vote **only once per proposal**.  
+bash
+Copy
+Edit
+npx hardhat run scripts/deploy_governance_token.js --network localhost
+Or to Goerli:
 
-✅ **Governance Mechanism**  
- Votes are counted directly in the proposal’s `voteCount`.  
- Winning proposals are determined by the **highest vote count**.  
+bash
+Copy
+Edit
+npx hardhat run scripts/deploy_governance_token.js --network goerli
+4️⃣ Run Tests
+bash
+Copy
+Edit
+npx hardhat test
+🔗 Next Steps
+Add proposal deadlines and quorum requirements
 
- 🛠️ Smart Contract Functions  
+Enable delegated voting (vote by proxy)
 
- `transfer(to, amount)`: Transfers governance tokens.  
- `createProposal(description)`: Allows users to submit proposals.   `vote(proposalId)`: Users vote using their token balance.  
- `getWinningProposal()`: Returns the proposal with the most votes.  
+Build a frontend for voting dashboard
 
- 🛠️ Deployment & Testing  
- Initial supply of **1,000,000 GOV tokens** is assigned to the deployer.  
- Proposals and voting tested on **Remix** and **local Ethereum testnets**.  
-
- 🔗 Next Steps  
-🔹 Implement **delegate voting** to allow voting through representatives.  
-🔹 Add **quorum and voting period** for better governance structure.  
-🔹 Integrate with **DAO frameworks** for full decentralization.  
-
-#100DaysOfCode #Web3 #Solidity #SmartContracts #Ethereum #Governance #DAO #Blockchain
+#Day 31 #200DaysOfCode #Solidity #SmartContracts #GovernanceToken #DAO #Web3 🚀

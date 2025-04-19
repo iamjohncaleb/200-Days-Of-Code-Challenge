@@ -1,21 +1,37 @@
-⭐ **Day 37: Reputation System Smart Contract**
+📊 Day 37: ReputationSystem
+🔍 Overview
+A lightweight reputation management smart contract.
+Supports increasing, decreasing, and querying reputations for wallet addresses, with event logs for updates.
 
- 🔍 **Overview**
-For **Day 37** of my **100 Smart Contracts in 100 Days Challenge**, I built a **Reputation System Smart Contract** in Solidity. This contract allows **tracking and managing user reputation scores** on the blockchain.
+📜 Features
+✅ Increase/Decrease user reputation
+✅ Query user reputation
+✅ Emits ReputationUpdated event on updates
 
- 📜 **Key Features**
-✅ **Reputation Tracking** – Each address has an **integer reputation score**.  
-✅ **Dynamic Adjustments** – Reputation can be **increased or decreased**.  
-✅ **Transparency** – Users can **view reputation scores** on-chain.  
+🛠️ Project Setup
+1️⃣ Install dependencies
+bash
+Copy
+Edit
+npm install
+2️⃣ Compile contracts
+bash
+Copy
+Edit
+npx hardhat compile
+3️⃣ Deploy to localhost
+bash
+Copy
+Edit
+npx hardhat run scripts/deploy_reputation.js --network localhost
+4️⃣ Run unit tests
+bash
+Copy
+Edit
+npx hardhat test
+📌 Possible Enhancements
+Add owner-only modifiers for reputation adjustment
 
- 🛠️ **How It Works**
- **increaseReputation(user, amount)** – Boosts a user's reputation.  
- **decreaseReputation(user, amount)** – Lowers a user's reputation.  
- **getReputation(user)** – Retrieves a user's current reputation score.  
+Integrate with dApps or marketplaces
 
- 🔗 **Next Steps**
-🔹 Implement **role-based access control** for reputation updates.  
-🔹 Introduce **reputation-based rewards or penalties**.  
-🔹 Enable **staking mechanisms** for reputation recovery.  
-
-#100DaysOfCode #Solidity #SmartContracts #Ethereum #ReputationSystem #Blockchain 🚀
+Use ERC20 or NFTs as reputation tokens

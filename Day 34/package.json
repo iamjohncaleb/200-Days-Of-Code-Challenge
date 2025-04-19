@@ -1,0 +1,16 @@
+{
+    "name": "time-locked-vault",
+    "version": "1.0.0",
+    "description": "A Solidity smart contract for time-locked ETH deposits",
+    "scripts": {
+      "test": "npx hardhat test",
+      "deploy": "npx hardhat run scripts/deploy_vault.js --network localhost"
+    },
+    "dependencies": {
+      "@nomicfoundation/hardhat-toolbox": "^2.0.0",
+      "dotenv": "^16.3.1",
+      "ethers": "^5.7.2",
+      "hardhat": "^2.17.0"
+    }
+  }
+  

@@ -1,32 +1,45 @@
-💱 Overview  
-For **Day 33** of my **100 Smart Contracts in 100 Days Challenge**, I built an **Algorithmic Stablecoin** in Solidity. This contract dynamically adjusts supply to maintain price stability around a target value.  
+📅Day 33 AlgorithmicStablecoin Smart Contract
+🔍 Overview
+An algorithmic stablecoin contract that adjusts total supply through rebasing based on price deviations, simulating a pegged value of 1 AST = 1 USD.
 
- 📜 Key Features  
+📜 Key Features
+✅ Rebase Mechanism – Dynamically increases or decreases total supply based on price feed
+✅ Oracle-Controlled – Only an authorized oracle address can trigger rebase operations
+✅ Basic ERC20-like Transfers and Approvals
+✅ Event Emissions for Transfers, Rebases, and Oracle Updates
 
-✅ **Supply Adjustment Mechanism**  
- If **price rises** above the target, new tokens are **minted** and distributed.  
- If **price drops**, tokens are **burned** to reduce supply.  
+🛠️ How It Works
+1️⃣ Deployed with initial supply and oracle address
+2️⃣ Transfers supported via transfer() and transferFrom()
+3️⃣ Rebase function adjusts total supply based on provided price input
+4️⃣ Oracle address can be updated by the current oracle
 
-✅ **Oracle Integration**  
- An **oracle** updates the stablecoin price.  
- The contract **rebases** supply based on the deviation from the target price.  
+🚀 Setup and Running the Project
+1️⃣ Install Dependencies
+bash
+Copy
+Edit
+npm install
+2️⃣ Compile the Smart Contract
+bash
+Copy
+Edit
+npx hardhat compile
+3️⃣ Deploy the Contract
+bash
+Copy
+Edit
+npx hardhat run scripts/deploy_stablecoin.js --network localhost
+4️⃣ Run Tests
+bash
+Copy
+Edit
+npx hardhat test
+📌 Next Improvements
+Integrate with Chainlink price feed oracle
 
- 🛠️ Smart Contract Functions  
+Implement access control for critical functions
 
- `transfer(to, amount)`: Transfers stablecoins between users.  
- `approve(spender, amount)`: Allows another address to spend tokens on behalf of the user.  
- `transferFrom(from, to, amount)`: Transfers tokens using an allowance.  
- `rebase(currentPrice)`: Adjusts supply based on market price.  
- `updateOracle(newOracle)`: Updates the oracle address.  
+Build a web dashboard for viewing supply, price, and rebase history
 
- 🛠️ Deployment & Testing  
- Requires an **oracle address** for price updates.  
- Tested using **simulated price variations**.  
- Can be deployed on **Ethereum testnets** for further evaluation.  
-
- 🔗 Next Steps  
-🔹 Improve **rebase strategy** to reduce volatility.  
-🔹 Integrate with **DEX liquidity pools** for better price stability.  
-🔹 Implement **governance mechanisms** to control rebase parameters.  
-
-#200DaysOfCode #Web3 #Solidity #SmartContracts #Ethereum #Stablecoins #DeFi #Blockchain  
+#Day33 #200DaysOfCode #Solidity #Stablecoins #SmartContracts #Web3 #Blockchain #Ethereum 🚀

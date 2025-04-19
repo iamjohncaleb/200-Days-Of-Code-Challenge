@@ -1,21 +1,39 @@
-📅 **Day 39: Multi-Signature Wallet Smart Contract**
+🏦 Day 39: MultiSigWallet
+🔍 Overview
+A multi-signature wallet where transactions require approval from multiple owners before being executed.
 
-🔍 **Overview**
-For **Day 39** of my **100 Smart Contracts in 100 Days Challenge**, I implemented a **Multi-Signature Wallet**. This contract **requires multiple approvals** before executing transactions, improving security and decentralization.
+📜 Features
+Multiple owners can create and approve transactions.
 
-📜 **Key Features**
-✅ **Multiple Owners** – A group of predefined owners manage funds together.  
-✅ **Approval Mechanism** – Transactions need a minimum number of approvals before execution.  
-✅ **Secure Execution** – Only approved transactions are executed.  
+Configurable number of required approvals for transaction execution.
 
-🛠️ **How It Works**
-1️⃣ Owners propose transactions using **createTransaction(to, value)**.  
-2️⃣ Other owners approve transactions with **approveTransaction(txId)**.  
-3️⃣ Once approvals meet the required threshold, the contract **executes the transaction**.  
+Prevents unauthorized transaction execution.
 
-🔗 **Next Steps**
-🔹 Add **revocation feature** for owners to remove approvals.  
-🔹 Implement **ERC20 token support** in addition to ETH transactions.  
-🔹 Improve **frontend UI** for better user experience.  
+🛠️ Project Setup
+1️⃣ Install dependencies
+bash
+Copy
+Edit
+npm install
+2️⃣ Compile contracts
+bash
+Copy
+Edit
+npx hardhat compile
+3️⃣ Deploy to localhost
+bash
+Copy
+Edit
+npx hardhat run scripts/deploy_multi_sig_wallet.js --network localhost
+4️⃣ Run unit tests
+bash
+Copy
+Edit
+npx hardhat test
+📌 Possible Enhancements
+Add more sophisticated transaction filtering and tracking
 
-#100DaysOfCode #Solidity #MultiSigWallet #Ethereum #BlockchainSecurity 🚀
+Implement withdrawal functionality for owners
+
+Improve security for owners (e.g., multi-factor authentication)
+

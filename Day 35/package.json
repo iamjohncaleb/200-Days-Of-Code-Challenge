@@ -1,0 +1,17 @@
+{
+    "name": "airdrop",
+    "version": "1.0.0",
+    "description": "A Solidity smart contract for token airdrops",
+    "scripts": {
+      "test": "npx hardhat test",
+      "deploy": "npx hardhat run scripts/deploy_airdrop.js --network localhost"
+    },
+    "dependencies": {
+      "@nomicfoundation/hardhat-toolbox": "^2.0.0",
+      "@openzeppelin/contracts": "^5.0.0",
+      "dotenv": "^16.3.1",
+      "ethers": "^5.7.2",
+      "hardhat": "^2.17.0"
+    }
+  }
+  

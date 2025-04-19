@@ -1,21 +1,42 @@
-🎁 **Day 35: Airdrop Smart Contract**
+🎁 Day 35: Airdrop Smart Contract
+🔍 Overview
+A token airdrop contract for distributing ERC-20 tokens to multiple recipients in a single transaction.
 
- 🔍 **Overview**
-For **Day 35** of my **100 Smart Contracts in 100 Days Challenge**, I built an **Airdrop Smart Contract** in Solidity. This contract allows the distribution of ERC-20 tokens to multiple recipients in a single transaction.
+📜 Key Features
+✅ Bulk token distribution
+✅ Input validation for matched array lengths
+✅ Plug-and-play with any ERC-20 token
 
- 📜 **Key Features**
-✅ **Bulk Token Distribution** – Send tokens to multiple addresses in one call.  
-✅ **Gas Efficiency** – Saves transaction fees compared to sending individually.  
-✅ **Flexible Allocation** – Supports different amounts per recipient.  
+🛠️ How It Works
+1️⃣ Deploy the contract with a token address
+2️⃣ Call distribute() with recipient addresses and amounts
+3️⃣ The contract sends tokens from its balance to recipients
 
- 🛠️ **How It Works**
- The contract is initialized with the **ERC-20 token address**.  
- Users call `distribute(recipients, amounts)`, specifying a list of addresses and corresponding token amounts.  
- The contract loops through the recipients and transfers the respective amounts.  
+🚀 Setup and Running the Project
+1️⃣ Install Dependencies
+bash
+Copy
+Edit
+npm install
+2️⃣ Compile Contracts
+bash
+Copy
+Edit
+npx hardhat compile
+3️⃣ Deploy Airdrop Contract
+bash
+Copy
+Edit
+npx hardhat run scripts/deploy_airdrop.js --network localhost
+4️⃣ Run Tests
+bash
+Copy
+Edit
+npx hardhat test
+📌 Optional Enhancements
+Allow owners to withdraw unclaimed tokens
 
- 🔗 **Next Steps**
-🔹 Implement **owner-only access** for controlled airdrops.  
-🔹 Add **batch size limits** to prevent excessive gas usage.  
-🔹 Include **Merkle proof verification** for secure claim-based airdrops.  
+Add claim-based airdrops
 
-#200DaysOfCode #Solidity #SmartContracts #Ethereum #Airdrop #Blockchain 🚀
+Integrate with frontend using Ethers.js
+

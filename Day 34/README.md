@@ -1,21 +1,38 @@
- ⏳ **Day 34: Time-Locked Vault Smart Contract**
+📅Day 35 TimeLockedVault Smart Contract
+🔍 Overview
+A Time-Locked Vault smart contract that securely holds ETH deposits for a specified lock duration. Users can deposit ETH, and withdraw it only after their personal unlock time has passed.
 
- 🔍 **Overview**
-For **Day 34** of my **100 Smart Contracts in 100 Days Challenge**, I built a **Time-Locked Vault** in Solidity. This contract allows users to deposit ETH that gets locked for a specified duration before withdrawal.
+📜 Key Features
+✅ Time-Locked Deposits – Funds are locked for a specified duration per deposit
+✅ User-Specific Unlock Time – Each user manages their own vault duration
+✅ Secure ETH Withdrawals – Only possible after lock duration expires
+✅ Event Emissions for Deposits and Withdrawals
 
- 📜 **Key Features**
-✅ **Deposit with Lock Time** – Users can deposit ETH and specify how long it remains locked.  
-✅ **Secure Fund Locking** – Funds cannot be withdrawn before the unlock time.  
-✅ **Automatic Withdrawal** – Once the lock period ends, users can withdraw their ETH.  
+🛠️ How It Works
+1️⃣ Deposit ETH with a custom lock time (in seconds)
+2️⃣ Withdraw ETH after unlock time has passed
+3️⃣ Event logs track deposits and withdrawals
 
- 🛠️ **How It Works**
- Users call `deposit(lockDuration)` and send ETH, specifying how long the funds should be locked.  
- The contract records the **deposit amount** and **unlock timestamp**.  
- Once the lock period expires, users can call `withdraw()` to retrieve their funds.  
+🚀 Setup and Running the Project
+1️⃣ Install Dependencies
+bash
+Copy
+Edit
+npm install
+2️⃣ Compile the Smart Contract
+bash
+Copy
+Edit
+npx hardhat compile
+3️⃣ Deploy the Contract
+bash
+Copy
+Edit
+npx hardhat run scripts/deploy_vault.js --network localhost
+4️⃣ Run Tests
+bash
+Copy
+Edit
+npx hardhat test
 
- 🔗 **Next Steps**
-🔹 Add **support for ERC20 tokens** instead of just ETH.  
-🔹 Implement **multiple deposits with different lock times**.  
-🔹 Add **beneficiary options**, allowing deposits for other users.  
-
-#100DaysOfCode #Solidity #SmartContracts #Blockchain #Ethereum #DeFi
+#Day35 #200DaysOfCode #Solidity #SmartContracts #Web3 #Blockchain #Ethereum 🚀

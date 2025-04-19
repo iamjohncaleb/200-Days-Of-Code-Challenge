@@ -1,21 +1,36 @@
-🐋 **Day 36: Anti-Whale Token Smart Contract**
+🐋 Day 36: AntiWhaleToken
+🔍 Overview
+A simple ERC-20 style token contract that enforces a 1% transaction limit on transfers to discourage whale activity.
 
- 🔍 **Overview**
-For **Day 36** of my **100 Smart Contracts in 100 Days Challenge**, I built an **Anti-Whale Token (AWT)** in Solidity. This ERC-20-like token prevents large transactions by enforcing a **maximum transaction limit**.
+📜 Features
+✅ 1% transaction limit per transfer
+✅ Total supply minted to deployer
+✅ Simple and gas-efficient implementation
 
- 📜 **Key Features**
-✅ **Anti-Whale Mechanism** – Limits transactions to **1% of the total supply** per transfer.  
-✅ **Basic ERC-20 Functionality** – Supports transfers between users.  
-✅ **Fair Token Distribution** – Prevents excessive influence from large holders.  
+🛠️ Project Setup
+1️⃣ Install dependencies
+bash
+Copy
+Edit
+npm install
+2️⃣ Compile the contracts
+bash
+Copy
+Edit
+npx hardhat compile
+3️⃣ Deploy contract
+bash
+Copy
+Edit
+npx hardhat run scripts/deploy_awt.js --network localhost
+4️⃣ Run unit tests
+bash
+Copy
+Edit
+npx hardhat test
+📌 Possible Enhancements
+Add ERC-20 approve and transferFrom functionality
 
- 🛠️ **How It Works**
- The contract initializes with a **total supply of 1,000,000 AWT**.  
- Users can transfer tokens **as long as the amount is ≤ 1% of the supply**.  
- Any transaction exceeding the **maxTxAmount** is rejected.  
+Owner-adjustable maxTxAmount
 
- 🔗 **Next Steps**
-🔹 Implement **whale tracking** to monitor large holders.  
-🔹 Introduce **progressive tax rates** for big transfers.  
-🔹 Add **liquidity pool integration** for decentralized trading.  
-
-#100DaysOfCode #Solidity #SmartContracts #Ethereum #AntiWhale #Blockchain 🚀
+Burn/mint functions

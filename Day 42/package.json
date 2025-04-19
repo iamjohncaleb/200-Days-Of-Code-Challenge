@@ -1,0 +1,14 @@
+{
+    "name": "classified-doc-access-control",
+    "version": "1.0.0",
+    "description": "National Security Smart Contract - Classified Document Access Control",
+    "main": "index.js",
+    "scripts": {
+      "test": "npx hardhat test",
+      "deploy": "npx hardhat run scripts/deploy.js --network localhost"
+    },
+    "devDependencies": {
+      "@nomicfoundation/hardhat-toolbox": "^3.0.0"
+    }
+  }
+  

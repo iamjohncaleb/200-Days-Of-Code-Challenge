@@ -1,30 +1,46 @@
- 🔄 Day 32: Token Bridge Smart Contract  
+📅 Day XX: TokenBridge Smart Contract
+🔍 Overview
+A Token Bridge Smart Contract for secure token transfers between chains via locking and minting mechanisms.
 
- 🔍 Overview  
-For **Day 32** of my **100 Smart Contracts in 100 Days Challenge**, I built a **Token Bridge Smart Contract** in Solidity. This contract facilitates cross-chain token transfers by locking tokens on one chain and minting them on another.  
+📜 Key Features
+✅ Lock Tokens – Users lock tokens on the source chain
+✅ Release & Mint Tokens – Bridge admin releases equivalent tokens on the target chain via mint()
+✅ Event Emission – Emits Locked and Released events for off-chain tracking
+✅ Simple Interface-based Integration
 
- 📜 Key Features  
+🛠️ How It Works
+1️⃣ Deploys with the target bridge address as a parameter
+2️⃣ Users lock tokens via lockTokens()
+3️⃣ Admin releases tokens and triggers mint on target bridge contract
 
-✅ **Cross-Chain Asset Transfers**  
- Users can **lock tokens** on the source chain.  
- The contract interacts with a **bridge contract** on the target chain to mint equivalent tokens.  
+🚀 Setup and Running the Project
+1️⃣ Install Dependencies
+bash
+Copy
+Edit
+npm install
+2️⃣ Compile the Smart Contracts
+bash
+Copy
+Edit
+npx hardhat compile
+3️⃣ Deploy the Contract
+To a local Hardhat network:
 
-✅ **Security & Transparency**  
- Only tokens that have been locked can be **released**.  
- Prevents unauthorized minting of tokens.  
+bash
+Copy
+Edit
+npx hardhat run scripts/deploy_token_bridge.js --network localhost
+4️⃣ Run Tests
+bash
+Copy
+Edit
+npx hardhat test
+📌 Next Steps
+Implement ERC20 token contract integration
 
- 🛠️ Smart Contract Functions  
+Build a frontend bridge dashboard
 
- `lockTokens(amount)`: Locks a user’s tokens in the contract.  
- `releaseTokens(recipient, amount)`: Releases tokens to a recipient by interacting with the target bridge contract.  
+Add multi-chain support
 
- 🛠️ Deployment & Testing  
- Requires deployment with a **target bridge contract address**.  
- Tested using **local blockchain networks** and **testnets**.  
-
- 🔗 Next Steps  
-🔹 Add **verification mechanisms** to prevent double spending.  
-🔹 Implement **multi-signature validation** for enhanced security.  
-🔹 Integrate with **oracles** for off-chain verification.  
-
-#100DaysOfCode #Web3 #Solidity #SmartContracts #Ethereum #TokenBridge #Blockchain #DeFi
+#Day32 #200DaysOfCode #Solidity #SmartContracts #TokenBridge #Ethereum #Blockchain #Web3 🚀
