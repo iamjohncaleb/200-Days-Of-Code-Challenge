@@ -13,15 +13,15 @@
 
 ## 🔍 **Overview**
 
-A lightweight, on-chain **Reputation Management Smart Contract** designed to track and manage reputations associated with wallet addresses.  
-Supports incrementing, decrementing, and querying user reputations — with event logs to keep track of updates.
+A lightweight, decentralized **Reputation Management Smart Contract** for tracking and managing user reputations directly on-chain.  
+It supports increasing, decreasing, and querying wallet reputations with event logs for every update — perfect for dApps and decentralized marketplaces.
 
 ---
 
 ## 📜 **Key Features**
-✅ **Increase/Decrease user reputation**  
-✅ **Query individual user reputation**  
-✅ **Emits `ReputationUpdated` event** on each reputation change  
+✅ **Increment/Decrement user reputation**  
+✅ **Query reputation score by wallet address**  
+✅ **Emits `ReputationUpdated` event** on every change  
 
 ---
 
@@ -50,9 +50,9 @@ npx hardhat test
 ---
 
 ## 📌 **Possible Enhancements**
-- 🔒 Add **owner-only modifiers** for adjusting reputations  
-- 🌐 Integrate with **dApps, marketplaces, or decentralized platforms**  
-- 🪙 Use **ERC-20 tokens or NFTs** as reputation badges/tokens  
+- 🔒 Add **access control modifiers** (e.g. `onlyOwner`) for adjusting reputations  
+- 🌐 Integrate with **marketplaces, dApps, and decentralized platforms**  
+- 🪙 Convert reputation into **ERC-20 tokens or NFTs** as identity badges  
 
 ---
 
@@ -61,4 +61,4 @@ npx hardhat test
 
 ---
 
-#ReputationSystem #Solidity #Blockchain #SmartContracts #Web3 #200DaysOfCode 🚀
+#ReputationSystem #Solidity #SmartContracts #Blockchain #Web3 #200DaysOfCode 🚀
