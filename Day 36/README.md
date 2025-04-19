@@ -64,6 +64,3 @@ npx hardhat test
 
 ---
 #DecentralizedIdentity #Solidity #Blockchain #Ethereum #SmartContracts #Web3 🚀
-```
-
-This version keeps the structure but is aligned with your new Decentralized Identity smart contract project. It also uses the appropriate headers and badges for a more polished and visually appealing README.
