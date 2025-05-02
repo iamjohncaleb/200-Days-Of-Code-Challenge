@@ -20,7 +20,7 @@ contract SubscriptionService {
         emit Subscribed(msg.sender, subscriptions[msg.sender]);
     }
 
-    function checkSubscription(address user) public view returns (bool) {
+    function checkSubcription(address user) public view returns (bool) {
         return subscriptions[user] >= block.timestamp;
-    }
+    }       
 }

@@ -47,4 +47,4 @@ Extend the metadata for satellite images to include additional details such as t
 
 Allow users to transfer NFTs as proof of access to satellite imagery data.
 
-#Day50 #200DaysOfCode #Solidity #SmartContracts #NFTs #Ethereum #SatelliteImagery
+#Day50 #200DaysOfCode #Solidity #SmartContracts #NFTs #Ethereum #SatelliteImagery-
