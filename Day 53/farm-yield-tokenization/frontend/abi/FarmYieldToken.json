@@ -1,0 +1,39 @@
+[
+    {
+      "inputs": [
+        { "internalType": "string", "name": "_name", "type": "string" },
+        { "internalType": "string", "name": "_location", "type": "string" },
+        { "internalType": "uint256", "name": "_landSize", "type": "uint256" },
+        { "internalType": "string", "name": "_cropType", "type": "string" }
+      ],
+      "name": "registerFarm",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        { "internalType": "address", "name": "to", "type": "address" },
+        { "internalType": "uint256", "name": "amount", "type": "uint256" }
+      ],
+      "name": "mint",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        { "internalType": "address", "name": "user", "type": "address" }
+      ],
+      "name": "getFarmInfo",
+      "outputs": [
+        { "internalType": "string", "name": "", "type": "string" },
+        { "internalType": "string", "name": "", "type": "string" },
+        { "internalType": "uint256", "name": "", "type": "uint256" },
+        { "internalType": "string", "name": "", "type": "string" }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ]
+  
