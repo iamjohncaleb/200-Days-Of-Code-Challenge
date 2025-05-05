@@ -1,6 +1,6 @@
 <div align="center">
   <br />
-  <img src="https://github.com/iamjohncaleb/200-Days-Of-Code-Challenge/blob/main/Thumbnails/the%20Day%2054.jpg" alt="Project Banner">
+  <img src="https://github.com/iamjohncaleb/200-Days-Of-Code-Challenge/blob/main/Thumbnails/the%20Day%2059.jpg" alt="Project Banner">
 
   <div>
     <img src="https://img.shields.io/badge/Built%20With-Hardhat-blue" />
@@ -9,7 +9,7 @@
     <img src="https://img.shields.io/badge/Network-Localhost-orange" />
   </div>
 
-  <h3 align="center">📅 Supply Chain Traceability Contract</h3>
+  <h3 align="center">📅Day 59 Supply Chain Traceability Contract</h3>
 </div>
 
 ## 🔍 **Overview**

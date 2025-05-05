@@ -1,6 +1,6 @@
 <div align="center">
   <br />
-  <img src="https://github.com/iamjohncaleb/200-Days-Of-Code-Challenge/blob/main/Thumbnails/the%20Day%2058.jpg" alt="Project Banner" width="100%" />
+  <img src="https://github.com/iamjohncaleb/200-Days-Of-Code-Challenge/blob/main/Thumbnails/the%20Day%2060.jpg" alt="Project Banner" width="100%" />
 
   <div>
     <img src="https://img.shields.io/badge/Built%20With-Hardhat-blue" />
