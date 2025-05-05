@@ -1,6 +1,6 @@
 <div align="center">
   <br />
-  <img src="https://github.com/iamjohncaleb/200-Days-Of-Code-Challenge/blob/main/Thumbnails/the%20Day%2052.jpg" alt="Project Banner">
+  <img src="https://github.com/iamjohncaleb/200-Days-Of-Code-Challenge/blob/main/Thumbnails/the%20Day%2054.jpg" alt="Project Banner">
 
   <div>
     <img src="https://img.shields.io/badge/Built%20With-Hardhat-blue" />
@@ -10,7 +10,7 @@
     <img src="https://img.shields.io/badge/Network-Localhost-orange" />
   </div>
 
-  <h3 align="center">📅 Day 52: Equipment Leasing Smart Contract</h3>
+  <h3 align="center">📅 Day 54: Equipment Leasing Smart Contract</h3>
 </div>
 
 ## 🔍 **Overview**
