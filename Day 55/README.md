@@ -1,94 +1,69 @@
 <div align="center">
   <br />
-  <img src="https://github.com/iamjohncaleb/200-Days-Of-Code-Challenge/blob/main/Thumbnails/the%20Day%2053.jpg" alt="Project Banner">
+  <img src="https://github.com/iamjohncaleb/200-Days-Of-Code-Challenge/blob/main/Thumbnails/the%20Day%2058.jpg" alt="Agri Crowd Funding">
 
   <div>
     <img src="https://img.shields.io/badge/Built%20With-Hardhat-blue" />
     <img src="https://img.shields.io/badge/Solidity-0.8.21-purple" />
-    <img src="https://img.shields.io/badge/Frontend-Next.js%20%26%20TailwindCSS-yellow" />
-    <img src="https://img.shields.io/badge/Web3-Wagmi%20%26%20RainbowKit-teal" />
+    <img src="https://img.shields.io/badge/Tests-Chai%20%26%20Waffle-green" />
     <img src="https://img.shields.io/badge/Network-Localhost-orange" />
   </div>
 
-  <h3 align="center">📅 Day 55: Subsidy Distribution Smart Contract</h3>
+  <h3 align="center">📅 Day 58: Agriculture Crowd Funding Smart Contract</h3>
 </div>
 
 ## 🔍 **Overview**
 
-A **Subsidy Distribution DApp** that registers beneficiaries and allows them to claim ETH-based subsidies. Built with Solidity, Hardhat, and a futuristic Next.js UI powered by RainbowKit and Wagmi.
+A decentralized crowdfunding platform tailored for agriculture projects. Farmers can create campaigns and receive funding from contributors transparently and securely.
 
 ---
 
 ## 📜 **Key Features**
 
-✅ **Register Beneficiaries** — Admins can register wallet addresses as eligible subsidy recipients
-✅ **Claim Subsidy** — Eligible users can claim their allocated subsidy (only once)
-✅ **Track Claims** — On-chain state verifies if a user has claimed
-✅ **Admin-Controlled** — Only the contract owner can register beneficiaries
+✅ Create funding campaigns with title, goal, and deadline  
+✅ Fund campaigns before deadline  
+✅ Claim funds if goal is met  
+✅ Refund contributors if goal isn’t met  
 
 ---
 
-## 🛠️ **How It Works**
+## 🛠️ **Usage**
 
-1️⃣ Contract deployer acts as the **admin**
-2️⃣ Admin registers wallet addresses as **beneficiaries**
-3️⃣ Registered users can connect their wallet and **claim** ETH once
-4️⃣ Claim events are **logged** for transparency
+#### 1️⃣ Install dependencies
 
----
 
-## 🚀 **Setup and Running the Project**
-
-### **1️⃣ Install Dependencies**
-
-```bash
 npm install
-```
-
-### **2️⃣ Compile the Smart Contract**
-
-```bash
+2️⃣ Compile contracts
+bash
+Copy
+Edit
 npx hardhat compile
-```
-
-### **3️⃣ Run Tests**
-
-```bash
+3️⃣ Run tests
+bash
+Copy
+Edit
 npx hardhat test
-```
+4️⃣ Deploy contract locally
+bash
+Copy
+Edit
+npx hardhat run scripts/deploy.ts --network localhost
+💻 Technologies
+Solidity
 
-### **4️⃣ Deploy to Local Network**
+Hardhat
 
-```bash
-npx hardhat run scripts/deploy.js --network localhost
-```
+TypeScript
 
-### **5️⃣ Run the Frontend**
+Chai/Waffle for testing
 
-```bash
-npm run dev
-```
+💡 Next Improvements
+Frontend integration
 
----
+Multi-currency support
 
-## ✨ **UI Snapshot**
+Progress tracking per campaign
 
-A clean, futuristic interface for wallet connection, subsidy registration, and claiming.
+DAO governance integration
 
----
-
-## 📌 **Next Steps**
-
-* 🔐 Add role-based permissions for multi-admin control
-* 🌍 Deploy to a testnet (e.g., Goerli or Sepolia)
-* 📦 Enable metadata logging for claims on IPFS
-
----
-
-## 🌐 **GitHub Repository**
-
-[🔗 Subsidy Distribution Source Code](https://github.com/your-repository-link)
-
----
-
-#SubsidyDApp #SmartContracts #Wagmi #RainbowKit #NextJS #200DaysOfCode 🚀
+#AgriFunding #Solidity #SmartContracts #Web3 #200DaysOfCode

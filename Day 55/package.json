@@ -1,0 +1,20 @@
+{
+  "name": "agriculture-crowdfunding",
+  "version": "1.0.0",
+  "description": "Agriculture Crowd Funding DApp",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy": "npx hardhat run scripts/deploy.ts --network localhost"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^1.0.4",
+    "@nomicfoundation/hardhat-toolbox": "^2.0.0",
+    "@nomiclabs/hardhat-ethers": "^2.1.1",
+    "chai": "^4.3.7",
+    "ethers": "^6.7.0",
+    "hardhat": "^2.21.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}
