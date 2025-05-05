@@ -104,9 +104,4 @@ npm run dev
 
 ---
 
-\#FarmFinance #YieldToken #Solidity #DeFi #Web3 #200DaysOfCode 🚀
-
-```
-
-Let me know if you'd like me to auto-generate the thumbnail image or personalize the links for your GitHub!
-```
+#FarmFinance #YieldToken #Solidity #DeFi #Web3 #200DaysOfCode 🚀
