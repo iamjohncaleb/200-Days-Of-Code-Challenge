@@ -21,8 +21,11 @@ A decentralized crowdfunding platform tailored for agriculture projects. Farmers
 ## 📜 **Key Features**
 
 ✅ Create funding campaigns with title, goal, and deadline  
+
 ✅ Fund campaigns before deadline  
+
 ✅ Claim funds if goal is met  
+
 ✅ Refund contributors if goal isn’t met  
 
 ---
