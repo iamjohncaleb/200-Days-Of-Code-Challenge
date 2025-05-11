@@ -41,16 +41,19 @@ bash
 Copy
 Edit
 npx hardhat compile
+
 3️⃣ Run tests
 bash
 Copy
 Edit
 npx hardhat test
+
 4️⃣ Deploy contract locally
 bash
 Copy
 Edit
 npx hardhat run scripts/deploy.ts --network localhost
+
 💻 Technologies
 Solidity
 
