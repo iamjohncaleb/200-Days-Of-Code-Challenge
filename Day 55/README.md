@@ -1,6 +1,6 @@
 <div align="center">
   <br />
-  <img src="https://github.com/iamjohncaleb/200-Days-Of-Code-Challenge/blob/main/Thumbnails/the%20Day%2053.jpg" alt="Project Banner">
+  <img src="https://github.com/iamjohncaleb/200-Days-Of-Code-Challenge/blob/main/Thumbnails/the%20Day%2055.jpg" alt="Project Banner">
 
   <div>
     <img src="https://img.shields.io/badge/Built%20With-Hardhat-blue" />
@@ -9,7 +9,7 @@
     <img src="https://img.shields.io/badge/Network-Localhost-orange" />
   </div>
 
-  <h3 align="center">📅 Day 58: Agriculture Crowd Funding Smart Contract</h3>
+  <h3 align="center">📅 Day 55: Agriculture Crowd Funding Smart Contract</h3>
 </div>
 
 ## 🔍 **Overview**
