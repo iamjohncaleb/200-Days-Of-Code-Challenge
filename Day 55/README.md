@@ -36,6 +36,7 @@ A decentralized crowdfunding platform tailored for agriculture projects. Farmers
 
 
 npm install
+
 2️⃣ Compile contracts
 bash
 Copy
